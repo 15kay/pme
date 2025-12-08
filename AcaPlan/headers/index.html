@@ -1,0 +1,59 @@
+
+<section>
+    <script src="js/load-nav.js"></script>
+    <!-- nav.html -->
+    <header class="header">
+        <!-- First Row - Logo and Search -->
+        <div class="header-top">
+            <div class="header-container">
+                <div class="logo-container centered-logo">
+                    <img src="assets/img/logo.png" alt="WSU LOGO" class="logo-img" />
+                </div>
+                <div class="search-container">
+                    <form class="search-form" id="searchForm">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                            aria-label="Search" />
+                        <button type="submit" class="search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Second Row - Centered Navigation -->
+        <div class="header-bottom">
+            <!-- Hamburger Button for Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="sidebar">
+                <span class="hamburger-icon">&#9776;</span>
+                <span class="hamburger-label">Menu</span>
+            </button>
+            <!-- Sidebar Navigation -->
+            <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                <!-- Sidebar Search at top -->
+                <!-- Sidebar Search for Mobile -->
+                <div class="sidebar-search-container">
+                    <form class="sidebar-search-form" id="sidebarSearchForm">
+                        <input type="text" class="sidebar-search-input" placeholder="Search..." aria-label="Search" />
+                    </form>
+                </div>
+               
+                <div id="navbar"></div>
+
+            </nav>
+        </div>
+    </header>
+</section>
+<script>
+    fetch('nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+</script>
