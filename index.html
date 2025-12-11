@@ -4,103 +4,183 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - WSU</title>
+    <title>PME - Planning, Monitoring & Evaluation | Walter Sisulu University</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <style>
-    .latest-section {
-        padding: 4rem 1.5rem;
-        background-color: var(--bg-secondary);
-        color: var(--text);
-        text-align: center;
+    /* Modern PME Styles */
+    .directorates-section {
+        padding: 5rem 1.5rem;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     }
-
-
-    .latest-grid {
+    
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #64748b;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .directorates-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
-        text-align: left;
     }
-
-    .latest-item {
-        background: #fff;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
+    
+    .directorate-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        /* Add this: */
-
+        border-top: 4px solid #0d3b66;
     }
-
-    .latest-img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        margin-bottom: 0.75rem;
-        border-radius: 4px;
-        display: block;
+    
+    .directorate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
-
-    .latest-content {
-        padding: 1rem 1.5rem 1.5rem;
-        flex-grow: 1;
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #0d3b66, #2563eb);
+        border-radius: 12px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        margin-bottom: 1.5rem;
     }
-
-    .latest-title {
-        font-size: 1.2rem;
+    
+    .card-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .directorate-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-bottom: 1rem;
+    }
+    
+    .directorate-card p {
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .card-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .card-features li {
+        padding: 0.5rem 0;
+        color: #475569;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .card-features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #10b981;
+        font-weight: bold;
+    }
+    
+    .card-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #0d3b66;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+    
+    .card-btn:hover {
+        background: #2563eb;
+        color: white;
+    }
+    
+    .about-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
         font-weight: 700;
         color: #0d3b66;
         margin-bottom: 0.5rem;
-        text-transform: none;
     }
-
-    .latest-desc {
-        font-size: 1rem;
-        color: var(--text);
-        opacity: 0.75;
-        line-height: 1.4;
-        margin: 0;
-    }
-
-    .latest-btn {
-        margin-top: 1rem;
-        display: inline-block;
-        padding: 0.5rem 1.25rem;
-        background-color: #0d3b66;
-        color: #fff;
-        border-radius: var(--radius);
-        font-size: 0.95rem;
+    
+    .stat-item p {
+        color: #64748b;
         font-weight: 500;
+    }
+    
+    .btn-outline {
+        background: transparent;
+        border: 2px solid #0d3b66;
+        color: #0d3b66;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
         text-decoration: none;
-        transition: background-color 0.3s ease;
-        align-self: flex-start;
+        font-weight: 600;
+        transition: all 0.3s ease;
     }
-
-    .latest-btn:hover {
-        background-color: var(--primary-dark);
-        color: #fff;
+    
+    .btn-outline:hover {
+        background: #0d3b66;
+        color: white;
     }
-
-    /* Responsive adjustments */
+    
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+    }
+    
     @media (max-width: 768px) {
-        .latest-grid {
+        .directorates-grid {
             grid-template-columns: 1fr;
         }
-
-        .latest-img {
-            height: 200px;
+        
+        .about-stats {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.5rem;
         }
     }
 </style>
@@ -112,7 +192,7 @@
 </div>
 
   <section>
-        <script src="/js/load-nav.js"></script>
+        <script src="js/load-nav.js"></script>
         <!-- nav.html -->
         <header class="header">
             <!-- First Row - Logo and Search -->
@@ -170,7 +250,7 @@
         </li>
         <li><a href="QMD/index-qmd.html" class="nav-link">Quality Management Directorate</a></li>
         <li><a href="AcaPlan/index.html" class="nav-link">Academic Planning</a></li>
-        <li><a href="assets/contact.php" onclick="contact()" class="nav-link">Contact Us</a></li>
+        <li><a href="assets/contact.html" class="nav-link">Contact Us</a></li>
     </ul>
                 </nav>
             </div>
@@ -180,12 +260,13 @@
     <!-- Hero Section -->
    <section class="hero-section" id="hero-section">
     <div class="hero-content">
-        <h2>Planning, Monitoring and Evaluation (PME)</h2>
+        <h1>Planning, Monitoring & Evaluation</h1>
+        <h2>Walter Sisulu University</h2>
         <p>
-            Responsible for identifying relevant information, coordinating submissions, and ensuring that all content aligns with the strategic objectives of the institution.
+            Driving institutional excellence through strategic oversight, performance monitoring, and evidence-based decision-making across all university operations.
         </p>
         <div class="hero-buttons">
-            <a href="assets/about.html" class="btn btn-primary">Learn More</a>
+            <a href="#directorates" class="btn btn-primary">Explore Our Directorates</a>
             <a href="assets/contact.html" class="btn btn-secondary">Contact Us</a>
         </div>
     </div>
@@ -225,58 +306,93 @@
     }
 </style>
 
-
-    <!-- About Section -->
-    <section class="about-section">
-    <div class="container">
-        <h2 class="section-title">Who We Are</h2>
-
-        <div class="about-grid">
-            <div class="about-image">
-                <img src="QMD/assets/img/article2.jpeg" alt="Planning, Monitoring & Evaluation Directorate">
-            </div>
-
-            <div class="about-content">
-                <h3>Planning, Monitoring & Evaluation (PME) Directorate</h3>
-
-                <p style="text-align: justify;">
-                    The Planning, Monitoring and Evaluation (PME) Directorate serves as the central hub for
-                    institutional oversight, performance assurance, and strategic coordination across Walter Sisulu University.
-                    PME ensures that all university processes, plans, and reports align with organisational goals and
-                    national higher education mandates.
-                </p>
-
-                <p style="text-align: justify;">
-                    As the custodian of institutional performance data, PME oversees the development, verification,
-                    and governance of all official university content intended for public dissemination. This includes
-                    strategic documents, performance reports, monitoring outcomes, institutional announcements, and compliance-based submissions.
-                </p>
-
-                <p style="text-align: justify;">
-                    The Directorate collaborates closely with key functional units such as Institutional Research and Planning,
-                    Quality Management, and Academic Planning to ensure that all published information is accurate,
-                    quality assured, and institutionally approved. This structured workflow supports transparency,
-                    accountability, and continuous improvement at WSU.
-                </p>
-
-                <p style="text-align: justify;">
-                    PME also plays a leading role in maintaining the integrity of online information through a controlled
-                    content management process, ensuring that all updates, documents, and reports are reviewed and approved
-                    before publication on the university’s digital platforms.
-                </p>
-
-                <p>
-                    <strong>For more information:</strong>
-                    <a href="assets/reports/pme-overview.pdf" target="_blank" rel="noopener noreferrer"
-                        class="download-link">
-                        Download the PME Directorate Overview (PDF)
-                    </a>
-                </p>
+    <!-- Directorates Section -->
+    <section id="directorates" class="directorates-section">
+        <div class="container">
+            <h2 class="section-title">Our Directorates</h2>
+            <p class="section-subtitle">Three specialized units working together to drive institutional excellence</p>
+            
+            <div class="directorates-grid">
+                <div class="directorate-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Institutional Research & Planning</h3>
+                    <p>Data-driven insights and strategic planning to support evidence-based decision-making and institutional growth.</p>
+                    <ul class="card-features">
+                        <li>Student Tracking & Analytics</li>
+                        <li>HEMIS Data Management</li>
+                        <li>Institutional Research</li>
+                        <li>Business Intelligence</li>
+                    </ul>
+                    <a href="IRP/index.html" class="card-btn">Explore IRP <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="directorate-card">
+                    <div class="card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Management</h3>
+                    <p>Ensuring excellence through comprehensive quality assurance, enhancement, and promotion initiatives.</p>
+                    <ul class="card-features">
+                        <li>Quality Assurance</li>
+                        <li>Quality Enhancement & Monitoring</li>
+                        <li>Quality Promotion & Capacity Development</li>
+                        <li>Institutional Reviews</li>
+                    </ul>
+                    <a href="QMD/index-qmd.html" class="card-btn">Explore QMD <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="directorate-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Planning</h3>
+                    <p>Strategic academic oversight ensuring programme quality, compliance, and institutional academic excellence.</p>
+                    <ul class="card-features">
+                        <li>Academic Activity Planning</li>
+                        <li>Programme Development & Accreditation</li>
+                        <li>University Liaison</li>
+                        <li>Strategic Advisory</li>
+                    </ul>
+                    <a href="AcaPlan/index.html" class="card-btn">Explore Academic Planning <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    
+    <!-- About PME Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>About PME Directorate</h2>
+                    <p>The Planning, Monitoring and Evaluation (PME) Directorate serves as the central coordination hub for institutional oversight, performance assurance, and strategic alignment across Walter Sisulu University.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="3">0</h3>
+                            <p>Specialized Directorates</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="15">0</h3>
+                            <p>Core Functions</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="100">0</h3>
+                            <p>Data-Driven Decisions</p>
+                        </div>
+                    </div>
+                    
+                    <a href="assets/about.html" class="btn btn-outline">Learn More About PME</a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="assets/img/hero.png" alt="PME Directorate">
+                </div>
+            </div>
+        </div>
+    </section>
 
   <section class="news-events-container">
 
@@ -371,30 +487,29 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.php" class="footer-logo">
-                        Institutional
-                        <span>Intelligence</span>
+                    <a href="index.html" class="footer-logo">
+                        PME
+                        <span>Directorate</span>
                     </a>
-                    <p class="footer-description">Empowering WSU with data-driven insights for institutional excellence.
+                    <p class="footer-description">Planning, Monitoring & Evaluation - Driving institutional excellence through strategic oversight and evidence-based decision-making.
                     </p>
                 </div>
 
                 <div class="footer-links">
                     <h4 class="footer-title">Quick Links</h4>
                     <ul>
-                        <li><a href="assets/team.php">Meet Our Team</a></li>
-                        <li><a href="assets/news.php">Our Reports</a></li>
-                        <li><a href="assets/news.php">News & Blog</a></li>
+                        <li><a href="assets/about.html">About PME</a></li>
+                        <li><a href="#directorates">Our Directorates</a></li>
+                        <li><a href="assets/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h4 class="footer-title">Units</h4>
                     <ul>
-                        <li><a href="assets/insti_efficiency.php">Institutional Research & Planning</a></li>
-                        <li><a href="assets/stu.php">Academic Planning</a></li>
-                        <li><a href="assets/hemis.php">Quality Management Directorate</a></li>
-                        
+                        <li><a href="IRP/index.html">Institutional Research & Planning</a></li>
+                        <li><a href="AcaPlan/index.html">Academic Planning</a></li>
+                        <li><a href="QMD/index-qmd.html">Quality Management Directorate</a></li>
                     </ul>
                 </div>
 
@@ -428,6 +543,42 @@
             </div>
         </div>
     </footer>
+<script>
+// Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(() => animateCounters(), 1);
+        } else {
+            counter.innerText = target;
+        }
+    });
+}
+
+// Intersection Observer for counter animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+const aboutStats = document.querySelector('.about-stats');
+if (aboutStats) {
+    observer.observe(aboutStats);
+}
+</script>
+
 </body>
 
 </html>

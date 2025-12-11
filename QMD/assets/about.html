@@ -180,16 +180,21 @@
             </div>
         </header>
     </section>
-<br><br>
-    <section class="contact-hero">
-        <br>
-        <h1>About Us</h1>
-        <p>Welcome to the Quality Management Directorate</p>
+<br><br><br><br><br><br><br>
+    <!-- Hero Section -->
+    <section class="about-hero" style="
+        background: linear-gradient(135deg, #0d3b66 0%, #2563eb 100%);
+        color: white;
+        padding: 4rem 1.5rem 2rem;
+        text-align: center;
+    ">
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">About QMD</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Quality Management Directorate - Ensuring excellence through comprehensive quality assurance and enhancement</p>
     </section>
 
-    <section class="Introduction">
-        <section>
-            <h2>Introduction</h2>
+    <section class="Introduction" style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Introduction</h2>
             <p>
                 At Walter Sisulu University, our vision of becoming “An impactful, technology-infused African
                 University”
@@ -215,8 +220,10 @@
             </p>
         </section>
 
-        <section>
-            <h2>The Rationale for the Quality Management Directorate</h2>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">The Rationale for the Quality Management Directorate</h2>
             <p>
                 The Quality Management Directorate is essential to the success of WSU’s mission, providing the
                 structure,
@@ -263,19 +270,20 @@
                 to embedding quality into every process, decision, and initiative—ensuring a resilient, responsive, and
                 future-ready institution.
             </p>
-        </section>
-
-        <section>
-            <h2>Vision</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #0d3b66;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Vision</h2>
             <p>
                 To enable excellence by fostering a mature, coherent, and integrated quality management system that
                 promotes
                 continuous improvement, accountability, and innovation across all spheres of the university.
             </p>
-        </section>
-
-        <section>
-            <h2>Mission</h2>
+            </div>
+            
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #2563eb;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Mission</h2>
             <p>
                 Our mission is to lead, coordinate, and enhance quality assurance and quality management across WSU by
                 building
@@ -304,10 +312,11 @@
                 Through these commitments, the Directorate ensures that WSU maintains excellence in teaching, learning,
                 research, community engagement, and administrative support.
             </p>
-        </section>
-
-        <section>
-            <h2>Values</h2>
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Values</h2>
             <p>
                 The Quality Management Directorate upholds the values enshrined in the University's strategic plan,
                 including
@@ -338,10 +347,19 @@
                 These values represent our unwavering commitment to excellence, integrity, and continuous improvement,
                 positioning QMD as a key driver of institutional quality at Walter Sisulu University.
             </p>
-        </section>
+        </div>
     </section>
 
-
+    <script>
+        // Navigation functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

@@ -193,19 +193,22 @@
             </div>
         </header>
     </section>
-    <br><br>
+<br><br><br><br><br><br><br>
 
-    <section class="contact-hero">
-        <br>
-        <h1>About Us</h1>
-        <p>Welcome to Academic Planning</p>
+    <!-- Hero Section -->
+    <section class="about-hero" style="
+        background: linear-gradient(135deg, #0d3b66 0%, #2563eb 100%);
+        color: white;
+        padding: 4rem 1.5rem 2rem;
+        text-align: center;
+    ">
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">About Academic Planning</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Strategic academic oversight ensuring programme quality, compliance, and institutional academic excellence</p>
     </section>
 
-    <section class="Introduction">
-
-        <!-- Introduction -->
-        <section>
-            <h2>Introduction</h2>
+    <section class="Introduction" style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Introduction</h2>
             <p>
                 The Academic Planning Directorate at Walter Sisulu University plays a strategic and foundational role
                 in shaping the academic landscape of the institution. As WSU strives toward its vision of being an
@@ -228,11 +231,10 @@
                     Download the Academic Planning Overview (PDF)
                 </a>
             </p>
-        </section>
-
-        <!-- Rationale -->
-        <section>
-            <h2>The Rationale for Academic Planning</h2>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">The Rationale for Academic Planning</h2>
             <p>
                 Academic Planning plays a pivotal role in supporting WSU’s strategic direction and academic mission.
                 Its work ensures that academic programmes, planning processes, and institutional compliance efforts
@@ -279,22 +281,21 @@
                 strategically aligned with the needs of its students, communities, and the broader higher education
                 sector.
             </p>
-        </section>
-
-        <!-- Vision -->
-        <section>
-            <h2>Vision</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #0d3b66;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Vision</h2>
             <p>
                 To guide and support the development of a strategic, compliant, and forward-thinking academic
                 environment
                 that enables Walter Sisulu University to deliver high-quality, relevant, and sustainable academic
                 programmes.
             </p>
-        </section>
-
-        <!-- Mission -->
-        <section>
-            <h2>Mission</h2>
+            </div>
+            
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #2563eb;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Mission</h2>
             <p>
                 Our mission is to advance WSU’s academic objectives by ensuring effective planning, programme
                 development,
@@ -336,11 +337,11 @@
                 credibility, and
                 strategic growth at Walter Sisulu University.
             </p>
-        </section>
-
-        <!-- Values -->
-        <section>
-            <h2>Values</h2>
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Values</h2>
             <p>
                 The Academic Planning Directorate upholds the values outlined in WSU’s strategic plan—integrity,
                 excellence,
@@ -374,11 +375,19 @@
                 and
                 promoting a strong, future-focused academic environment.
             </p>
-        </section>
-
+        </div>
     </section>
 
-
+    <script>
+        // Navigation functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

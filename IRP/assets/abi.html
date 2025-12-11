@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics & Business Intelligence - IRP | WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<style>
+    .abi-hero {
+        background: linear-gradient(135deg, #0d3b66 0%, #2563eb 100%);
+        color: white;
+        padding: 4rem 1.5rem 2rem;
+        text-align: center;
+    }
+    
+    .abi-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .abi-hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .abi-section {
+        padding: 4rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .content-card {
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        color: #0d3b66;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-top: 4px solid #0d3b66;
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #0d3b66, #2563eb);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+    
+    .service-icon i {
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .service-card h3 {
+        color: #0d3b66;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .service-card p {
+        color: #64748b;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .tool-item {
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #2563eb;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .tool-icon {
+        width: 40px;
+        height: 40px;
+        background: #2563eb;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    
+    .tool-icon i {
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .tool-info h4 {
+        color: #0d3b66;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+    }
+    
+    .tool-info p {
+        color: #64748b;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    
+    .contact-section {
+        background: #f8fafc;
+        padding: 3rem;
+        border-radius: 12px;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #0d3b66;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        margin: 0 0.5rem;
+    }
+    
+    .contact-btn:hover {
+        background: #2563eb;
+        color: white;
+    }
+    
+    @media (max-width: 768px) {
+        .abi-hero h1 {
+            font-size: 2rem;
+        }
+        
+        .abi-section {
+            padding: 2rem 1rem;
+        }
+        
+        .content-card {
+            padding: 2rem;
+        }
+        
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .tools-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navigation -->
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <header class="header">
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <div class="header-bottom">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+                        </form>
+                    </div>
+
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional Efficiency</a></li>
+                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional Research</a></li>
+                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
+                                <li><a href="abi.html" class="dropdown-link active">Analytics & Business Intelligence</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="abi-hero">
+        <h1>Analytics & Business Intelligence</h1>
+        <p>Transforming institutional data into actionable insights for strategic decision-making and operational excellence at Walter Sisulu University</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="abi-section">
+        <!-- Overview -->
+        <div class="content-card">
+            <h2 class="section-title">Overview</h2>
+            <p>The Analytics & Business Intelligence unit within IRP serves as the data intelligence hub for Walter Sisulu University. We specialize in transforming raw institutional data into meaningful insights that drive strategic decision-making, operational efficiency, and institutional excellence.</p>
+            
+            <p>Our team leverages advanced analytics tools, data visualization techniques, and business intelligence platforms to provide comprehensive reporting, predictive analytics, and real-time dashboards that support university leadership, academic departments, and administrative units in making informed, evidence-based decisions.</p>
+        </div>
+
+        <!-- Core Services -->
+        <div class="content-card">
+            <h2 class="section-title">Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Advanced statistical analysis, trend identification, and predictive modeling to uncover insights from institutional data.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Interactive Dashboards</h3>
+                    <p>Real-time, interactive dashboards providing key performance indicators and metrics for various stakeholders.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Custom Reports</h3>
+                    <p>Tailored reporting solutions for specific departments, committees, and strategic initiatives across the university.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Machine learning and statistical modeling to forecast trends, identify risks, and support strategic planning.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Integration</h3>
+                    <p>Seamless integration of data from multiple university systems to create comprehensive analytical datasets.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training & Support</h3>
+                    <p>Capacity building and training programs to enhance data literacy across the university community.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="content-card">
+            <h2 class="section-title">Tools & Technologies</h2>
+            <p>We utilize industry-leading tools and technologies to deliver comprehensive business intelligence solutions:</p>
+            
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>Power BI</h4>
+                        <p>Interactive dashboards and reports</p>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>Power Heda</h4>
+                        <p>Advanced data visualization</p>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>R & Python</h4>
+                        <p>Statistical analysis and modeling</p>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>SQL Server</h4>
+                        <p>Data warehousing and management</p>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>Excel Advanced</h4>
+                        <p>Complex data analysis and modeling</p>
+                    </div>
+                </div>
+
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h4>Cloud Analytics</h4>
+                        <p>Scalable cloud-based solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Focus Areas -->
+        <div class="content-card">
+            <h2 class="section-title">Key Focus Areas</h2>
+            <ul style="color: #475569; line-height: 1.8; font-size: 1.1rem;">
+                <li><strong style="color: #0d3b66;">Student Success Analytics:</strong> Tracking student performance, retention rates, and graduation outcomes to identify intervention opportunities.</li>
+                <li><strong style="color: #0d3b66;">Financial Performance:</strong> Budget analysis, revenue tracking, and cost optimization insights for financial sustainability.</li>
+                <li><strong style="color: #0d3b66;">Academic Program Effectiveness:</strong> Analyzing program performance, enrollment trends, and curriculum effectiveness.</li>
+                <li><strong style="color: #0d3b66;">Operational Efficiency:</strong> Process optimization, resource utilization, and performance benchmarking across departments.</li>
+                <li><strong style="color: #0d3b66;">Strategic Planning Support:</strong> Data-driven insights for institutional strategic planning and goal setting.</li>
+                <li><strong style="color: #0d3b66;">Compliance Reporting:</strong> Automated reporting for regulatory compliance and accreditation requirements.</li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2 style="color: #0d3b66; margin-bottom: 1rem;">Get Analytics Support</h2>
+            <p style="color: #64748b; margin-bottom: 2rem;">Need data insights or business intelligence solutions? Our team is here to help transform your data into actionable intelligence.</p>
+            
+            <div>
+                <a href="mailto:snano@wsu.ac.za" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Email ABI Team
+                </a>
+                <a href="contact.html" class="contact-btn">
+                    <i class="fas fa-phone"></i> Request Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navigation functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

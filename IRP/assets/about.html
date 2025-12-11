@@ -184,15 +184,20 @@
             </div>
         </header>
     </section>
-    <br><br>
-    <section class="contact-hero">
-        <br>
-        <h1>About Us</h1>
-        <p>Welcome to Institutional Intelligence</p>
+    <br><br><br><br><br><br><br>
+    <!-- Hero Section -->
+    <section class="about-hero" style="
+        background: linear-gradient(135deg, #0d3b66 0%, #2563eb 100%);
+        color: white;
+        padding: 4rem 1.5rem 2rem;
+        text-align: center;
+    ">
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">About IRP</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Institutional Research & Planning - Driving data-informed excellence at Walter Sisulu University</p>
     </section>
-    <section class="Introduction">
-        <section>
-            <h2>Introduction</h2>
+    <section class="Introduction" style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Introduction</h2>
             <p>
                 At WSU, we envision “An impactful, technology-infused African University”, a future where knowledge,
                 innovation, and excellence are not just aspirations but integral components of our institutional DNA. To
@@ -216,8 +221,10 @@
             </p>
         </section>
 
-        <section>
-            <h2>The Rationale for Institutional Intelligence</h2>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">The Rationale for Institutional Intelligence</h2>
             <p>
                 Institutional Intelligence, embodied by the Directorate of Institutional Intelligence, plays a pivotal
                 role
@@ -264,19 +271,20 @@
                 challenges into opportunities, innovate in our pursuit of excellence, and realise our vision for Walter
                 Sisulu University.
             </p>
-        </section>
-
-        <section>
-            <h2>Vision</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #0d3b66;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Vision</h2>
             <p>
                 To be the driving force behind data-informed excellence, empowering the institution to achieve its
                 highest
                 potential by providing insightful intelligence for strategic decision-making and innovation.
             </p>
-        </section>
-
-        <section>
-            <h2>Mission</h2>
+            </div>
+            
+            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #2563eb;">
+                <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Mission</h2>
             <p>
                 Our mission is to leverage data-driven insights and intelligence to support the university's commitment
                 to
@@ -314,9 +322,11 @@
                 and
                 advance, making a significant impact on the institution's success and the broader community it serves.
             </p>
-        </section>
-        <section>
-            <h2>Values</h2>
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #0d3b66; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Values</h2>
             <p>
                 The Institutional Intelligence Directorate upholds the values outlined in the University's strategic
                 plan, including honesty and integrity, quality and excellence, respect, and Ubuntu. Furthermore, the
@@ -339,8 +349,19 @@
                 transparency, and collaboration—pivotal in fulfilling its mission effectively within the university
                 community.
             </p>
-        </section>
+        </div>
+    </section>
 
+    <script>
+        // Navigation functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

@@ -1,236 +1,531 @@
-
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - WSU</title>
+    <title>Contact Us - PME Directorate | Walter Sisulu University</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-  <style>
-    :root {
-      --primary-color: #121b2b;
-      --light-gray: #f3f4f6;
-      --dark-gray: #111827;
-      --accent-color: #3b82f6;
-      --radius: 12px;
-      --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+    .contact-hero {
+        background: linear-gradient(135deg, #0d3b66 0%, #2563eb 100%);
+        color: white;
+        padding: 4rem 1.5rem 2rem;
+        text-align: center;
     }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-gray);
-      color: var(--dark-gray);
-      line-height: 1.6;
+    
+    .contact-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
+    
+    .contact-hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: whi;
+    
+    .contact-section {
+        padding: 4rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+    
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-top: 3rem;
     }
-
-    form,
-    .info {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
+    
+    .contact-info {
+        background: #f8fafc;
+        padding: 2.5rem;
+        border-radius: 12px;
+        border-left: 4px solid #0d3b66;
     }
-
-    label {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: block;
+    
+    .contact-info h2 {
+        color: #0d3b66;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
     }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: var(--radius);
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
+    
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--primary-color);
-      outline: none;
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #0d3b66, #2563eb);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
     }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
+    
+    .contact-icon i {
+        color: white;
+        font-size: 1.2rem;
     }
-
-    button {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    
+    .contact-details h3 {
+        color: #0d3b66;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
     }
-
-    button:hover {
-      background-color: var(--accent-color);
+    
+    .contact-details p {
+        color: #64748b;
+        margin: 0;
+        line-height: 1.5;
     }
-
-    .info h2 {
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+    
+    .contact-details a {
+        color: #0d3b66;
+        text-decoration: none;
+        font-weight: 500;
     }
-
-    .info p {
-      margin-bottom: 0.75rem;
+    
+    .contact-details a:hover {
+        color: #2563eb;
     }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      border-radius: var(--radius);
-      border: none;
-      margin-top: 1.5rem;
+    
+    .contact-form {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
-
-    @media screen and (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    
+    .contact-form h2 {
+        color: #0d3b66;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
     }
-  </style>
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #374151;
+        font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #0d3b66;
+    }
+    
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+    
+    .submit-btn {
+        background: #0d3b66;
+        color: white;
+        padding: 0.875rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        width: 100%;
+    }
+    
+    .submit-btn:hover {
+        background: #2563eb;
+    }
+    
+    .directorate-contacts {
+        margin-top: 4rem;
+        padding: 3rem;
+        background: #f8fafc;
+        border-radius: 12px;
+    }
+    
+    .directorate-contacts h2 {
+        text-align: center;
+        color: #0d3b66;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    
+    .directorate-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .directorate-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-top: 4px solid #0d3b66;
+    }
+    
+    .directorate-card h3 {
+        color: #0d3b66;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .directorate-card p {
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .directorate-card .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #0d3b66;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .directorate-card .contact-link:hover {
+        color: #2563eb;
+    }
+    
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 2rem;
+        }
+        
+        .contact-section {
+            padding: 2rem 1rem;
+        }
+        
+        .contact-info,
+        .contact-form {
+            padding: 1.5rem;
+        }
+    }
+</style>
 
 <body>
-<section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+    <!-- Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="logo-container centered-logo">
+                    <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                </div>
+                <div class="search-container">
+                    <form class="search-form" id="searchForm">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                            aria-label="Search" />
+                        <button type="submit" class="search-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="sidebar">
+                <span class="hamburger-icon">&#9776;</span>
+                <span class="hamburger-label">Menu</span>
+            </button>
+
+            <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                <div class="sidebar-search-container">
+                    <form class="sidebar-search-form" id="sidebarSearchForm">
+                        <input type="text" class="sidebar-search-input" placeholder="Search..."
+                            aria-label="Search" />
+                    </form>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="../IRP/index.html" class="nav-link">Institutional Research Planning</a></li>
+                    <li><a href="../QMD/index-qmd.html" class="nav-link">Quality Management Directorate</a></li>
+                    <li><a href="../AcaPlan/index.html" class="nav-link">Academic Planning</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br><br><br><br><br>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h1>Contact PME Directorate</h1>
+        <p>Get in touch with our team for planning, monitoring, and evaluation services at Walter Sisulu University</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
+                    <div class="contact-details">
+                        <h3>Office Location</h3>
+                        <p>Room R102, Potsdam Campus<br>
+                        Walter Sisulu University<br>
+                        East London, 5200<br>
+                        South Africa</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+27475022849">+27 (0)47 502 2849</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p><a href="mailto:pme@wsu.ac.za">pme@wsu.ac.za</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday<br>
+                        08:00 AM - 16:00 PM</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
-
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
-
-                        </form>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                   <div id="navbar"></div>
-                </nav>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department/Faculty</label>
+                        <input type="text" id="department" name="department">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="irp">Institutional Research & Planning</option>
+                            <option value="qmd">Quality Management</option>
+                            <option value="academic">Academic Planning</option>
+                            <option value="data">Data Request</option>
+                            <option value="reporting">Reporting & Compliance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Please provide details about your inquiry..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
-        </header>
+        </div>
+
+        <!-- Directorate Contacts -->
+        <div class="directorate-contacts">
+            <h2>Contact Our Directorates</h2>
+            <div class="directorate-grid">
+                <div class="directorate-card">
+                    <h3>Institutional Research & Planning</h3>
+                    <p>For data requests, institutional research, HEMIS submissions, and strategic planning support.</p>
+                    <a href="mailto:irp@wsu.ac.za" class="contact-link">
+                        <i class="fas fa-envelope"></i> irp@wsu.ac.za
+                    </a>
+                </div>
+
+                <div class="directorate-card">
+                    <h3>Quality Management</h3>
+                    <p>For quality assurance, enhancement initiatives, and institutional review processes.</p>
+                    <a href="mailto:qmd@wsu.ac.za" class="contact-link">
+                        <i class="fas fa-envelope"></i> qmd@wsu.ac.za
+                    </a>
+                </div>
+
+                <div class="directorate-card">
+                    <h3>Academic Planning</h3>
+                    <p>For academic programme development, accreditation, and strategic academic oversight.</p>
+                    <a href="mailto:academicplanning@wsu.ac.za" class="contact-link">
+                        <i class="fas fa-envelope"></i> academicplanning@wsu.ac.za
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="contact-hero">
-        <br>
-        <h1>Get In Touch</h1>
-        <p>We'd love to hear from you. Reach out to our team for questions, collaborations, or support.</p>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        PME
+                        <span>Directorate</span>
+                    </a>
+                    <p class="footer-description">Planning, Monitoring & Evaluation - Driving institutional excellence through strategic oversight and evidence-based decision-making.</p>
+                </div>
 
-    <section>
-        <div class="grid">
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About PME</a></li>
+                        <li><a href="../index.html#directorates">Our Directorates</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
 
-      <!-- Contact Form -->
-      <form action="submit_form.php" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+                <div class="footer-links">
+                    <h4 class="footer-title">Units</h4>
+                    <ul>
+                        <li><a href="../IRP/index.html">Institutional Research & Planning</a></li>
+                        <li><a href="../AcaPlan/index.html">Academic Planning</a></li>
+                        <li><a href="../QMD/index-qmd.html">Quality Management Directorate</a></li>
+                    </ul>
+                </div>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R102, Potsdam, East London, 5200</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+27475022849">+27 (0)47 502 2849</a>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>Monday - Friday, 08 am - 16:00 pm</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pme@wsu.ac.za">pme@wsu.ac.za</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <label for="recipient">Who do you want to contact?</label>
-        <select id="recipient" name="recipient" required>
-          <option value="">-- Please Select --</option>
-          <option value="stu@wsu.ac.za">Student Tracking Unit</option>
-          <option value="bngomfela@wsu.ac.za">HEMIS</option>
-          <option value="snano@wsu.ac.za">Business Intelligence</option>
-        </select>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 Planning, Monitoring & Evaluation (PME) Directorate, Walter Sisulu University. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required>
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Thank you for your message! We will get back to you within 24-48 hours.');
+            this.reset();
+        });
 
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <!-- Contact Info + Map -->
-      <div class="info">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> 043.....</p>
-        <p><strong>Email:</strong> adebeza@wsu.ac.za | irp@wsu.ac.za</p>
-        <p><strong>Address:</strong>Potsdam, East London, 5200</p>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26797.016619469116!2d27.66695055!3d-32.908026799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e66c438e3ea522b%3A0x467fb8a084700c55!2sWalter%20Sisulu%20University%20Potsdam%20Campus!5e0!3m2!1sen!2sza!4v1753218489117!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-    
+        // Navigation functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
