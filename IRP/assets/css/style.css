@@ -663,7 +663,7 @@ body {
             text-align: center;
             color: white;
             background: linear-gradient(to top, rgba(29,25,25,0.6), rgba(10, 14, 18, 0.21)), 
-                        url('/IRP/assets/img/hero.png') center/cover no-repeat;
+                        url('img/hero.png') center/cover no-repeat;
                         
         }
 
