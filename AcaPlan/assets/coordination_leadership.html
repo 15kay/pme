@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="/AcaPlan/index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="academic_activity.html" class="dropdown-link">Academic Activity
+                                        Planning</a></li>
+
+                                <li><a href="programme_development.html" class="dropdown-link">Programme
+                                        Development & Accreditation</a></li>
+
+                                <li><a href="university_liaison.html" class="dropdown-link">University
+                                        Liaison</a></li>
+
+                                <li><a href="strategic_advisory.html" class="dropdown-link">Strategic
+                                        Advisory</a></li>
+
+                                <li><a href="coordination_leadership.html" class="dropdown-link">Coordination &
+                                        Leadership</a></li>
+                            </ul>
+                        </li>
+
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+<section class="contact-hero">
+    <br>
+    <h1>Coordination & Leadership</h1>
+    <p>Driving Collaborative Academic Planning Across WSU</p>
+
+    <nav class="section-nav">
+        <ul>
+            <li><a href="academic_activity.html" class="section-link">Academic Activity Planning</a></li>
+            <li><a href="programme_development.html" class="section-link">Programme Development</a></li>
+            <li><a href="university_liaison.html" class="section-link">University Liaison</a></li>
+            <li><a href="strategic_advisory.html" class="section-link">Strategic Advisory</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+
+    <h2>Coordination & Leadership</h2>
+
+    <p style="text-align: justify;">
+        The Coordination & Leadership function ensures that academic planning activities across Walter Sisulu 
+        University are cohesive, collaborative, and aligned with institutional strategic priorities. This function 
+        strengthens communication, integrates planning efforts, and fosters a shared academic vision across faculties 
+        and administrative units.
+    </p>
+
+    <p style="text-align: justify;">
+        Academic Planning plays a leadership role by facilitating workshops, engaging stakeholders, coordinating 
+        academic planning cycles, and supporting the development of innovative academic initiatives. The function 
+        ensures that all academic planning processes reflect collective ownership and institutional commitment.
+    </p>
+
+    <h4>Roles and Responsibilities:</h4>
+
+    <ul>
+        <li><strong>Institutional Coordination:</strong> Align academic planning activities across faculties, 
+            directorates, and governance structures to ensure a unified institutional approach.</li>
+
+        <li><strong>Stakeholder Engagement:</strong> Facilitate collaborative planning sessions, workshops, and 
+            discussions to support new programme development, curriculum enhancement, and strategic projects.</li>
+
+        <li><strong>Leadership in Academic Initiatives:</strong> Provide leadership in the conceptualisation and 
+            rollout of academic initiatives that advance institutional academic excellence.</li>
+
+        <li><strong>Capacity Building:</strong> Support faculties and academic units through advisory services, 
+            training sessions, and resource-sharing to strengthen academic planning competencies.</li>
+
+        <li><strong>Integrated Communication:</strong> Ensure clear and consistent communication across departments 
+            to support timely decision-making and coordinated academic operations.</li>
+
+        <li><strong>Supporting Institutional Strategy:</strong> Align planning activities with the university’s 
+            strategic priorities and promote cohesion across academic and support units.</li>
+    </ul>
+
+    <p style="text-align: justify;">
+        Through strong coordination and leadership, Academic Planning ensures that WSU’s academic enterprise is 
+        integrated, forward-thinking, and capable of delivering high-impact academic outcomes aligned with the 
+        institution’s mission and strategic direction.
+    </p>
+
+</section>
+
+
+
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const sidebar = document.getElementById("sidebar");
+            const closeBtn = document.getElementById("closeBtn");
+
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.toggle("show");
+                hamburger.classList.toggle("active");
+                // Toggle aria-expanded for accessibility
+                const expanded = hamburger.getAttribute("aria-expanded") === "true";
+                hamburger.setAttribute("aria-expanded", String(!expanded));
+            });
+
+            closeBtn.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                hamburger.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+
+            // Close sidebar if clicking outside
+            window.addEventListener("click", (e) => {
+                if (
+                    sidebar.classList.contains("show") &&
+                    !sidebar.contains(e.target) &&
+                    !hamburger.contains(e.target)
+                ) {
+                    sidebar.classList.remove("show");
+                    hamburger.classList.remove("active");
+                    hamburger.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+    </script> -->
+</body>
+
+</html>

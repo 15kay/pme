@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+
+          <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="assets/about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional
+                                        Efficiency</a></li>
+                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional
+                                        Research</a></li>
+                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
+                                <li><a href="abi.html" class="dropdown-link">Analytics & Business
+                                        Intelligence</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+
+    <section class="contact-hero">
+        <br>
+        <h1>ST - IR</h1>
+        <p>Welcome to Student Tracking - Institutional Research</p>
+        <nav class="section-nav">
+        <ul>
+            <li><a href="../IR/dashboard.html" class="section-link">View Dashboards</a></li>
+            <li><a href="../IR/reports.html" class="section-link">View Reports</a></li>
+        </ul>
+    </nav>
+    </section>
+
+    <section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+        <h2>Student and Learning Programmes Intelligence</h2>
+        <h3>Student Tracking and Data Analysis</h3>
+        <p style="text-align: justify;">This function plays a central role in tracking and analysing student data to
+            enhance the Academic Strategic Plan of the institution, support the Quality Management Plan, and facilitate
+            the Quality Review Process. It focuses on identifying 'at-risk' students, providing timely interventions,
+            and pinpointing root causes to optimize resource allocation and promote student success.</p>
+
+        <h4>Roles and Responsibilities:</h4>
+        <ul>
+            <li><strong>Development and Implementation of Student Tracking System:</strong> Develop and implement a
+                robust system to monitor student performance and access to academic resources.</li>
+            <li><strong>Cohort Analyses and 'At-Risk' Identification:</strong> Analyze trends in dropout, retention, and
+                graduation rates per cohort.</li>
+            <li><strong>Intervention Strategies and Student Recognition:</strong> Apply interventions and recognize
+                high-performing students.</li>
+            <li><strong>Trends Analysis and Module Identification:</strong> Flag modules with high failure rates per
+                faculty.</li>
+            <li><strong>Predictive Analysis for Early Intervention:</strong> Forecast high-risk students early for
+                timely intervention.</li>
+            <li><strong>Resource Allocation Collaboration:</strong> Work with faculties to target support and address
+                risk factors.</li>
+            <li><strong>Access to Data and Insights:</strong> Share dashboards and reports with decision-makers for
+                proactive intervention.</li>
+        </ul>
+
+        <p>This consolidated function empowers real-time decisions that improve institutional academic strategies and
+            student success outcomes.</p>
+
+        
+
+        <h2>Learning Analytics</h2>
+        <p>The Learning Analytics function is dedicated to leveraging data from the institution's eLearning system to
+            enhance learning, inform decisions, and optimize educational outcomes. It collects, analyzes, and reports on
+            learner data to improve student success.</p>
+
+        <h4>Roles and Responsibilities:</h4>
+        <ul>
+            <li><strong>Individual Learner Insights:</strong> Equip students with dashboards for self-monitoring and
+                growth tracking.</li>
+            <li><strong>Early Identification of Students Needing Support:</strong> Use predictive models to detect
+                academic risks early.</li>
+            <li><strong>Academic and Support Staff Support:</strong> Enable effective group or individual intervention
+                planning.</li>
+            <li><strong>Curriculum Enhancement:</strong> Identify opportunities to improve content delivery and
+                instructional design.</li>
+            <li><strong>Strategic Decision-Making:</strong> Guide institutional decisions on recruitment, retention, and
+                marketing.</li>
+            <li><strong>Privacy and Data Security:</strong> Maintain strict compliance with data privacy and protection
+                standards.</li>
+        </ul>
+
+        <p style="text-align: justify;">This function strengthens the learning environment by making learning data actionable for both students and
+            educators.</p>
+
+        <h2>Democratising Data – Empowering Faculties to Drive Student Success</h2>
+        <p>This function provides academics and administrators with timely, accessible data to support informed
+            decision-making. It promotes a culture of data use through intuitive dashboards and staff empowerment.</p>
+
+        <h4>Roles and Responsibilities:</h4>
+        <ul>
+            <li><strong>Data Dashboard Development:</strong> Build dashboards that visualize real-time student
+                performance and institutional metrics.</li>
+            <li><strong>Capacity Building:</strong> Train staff on data tools and decision-making using dashboards.</li>
+            <li><strong>Disaggregated Data Sharing:</strong> Present performance data in workshops and departmental
+                meetings.</li>
+            <li><strong>Course-Level Data Analysis:</strong> Review performance by subject area to pinpoint success
+                barriers.</li>
+            <li><strong>Instructor-Based Data Disaggregation:</strong> Evaluate how different lecturers impact student
+                outcomes.</li>
+            <li><strong>Cultural Shift Towards Data-Informed Decisions:</strong> Foster curiosity and reduce blame
+                culture in performance discussions.</li>
+            <li><strong>Early Adopter Engagement:</strong> Encourage innovators to use and promote the dashboards.</li>
+            <li><strong>Advocacy and Adoption:</strong> Promote storytelling and feedback from early adopters to
+                encourage wide usage.</li>
+        </ul>
+
+        <p>This initiative transforms WSU into a data-empowered institution where decisions that improve student
+            outcomes are driven by evidence, not assumption.</p>
+
+        <!-- INSTITUTIONAL RESEARCH INTELLIGENCE -->
+  <h2>Institutional Research Intelligence</h2>
+  <p style="text-align: justify;">The Institutional Research Intelligence function at WSU conducts regular surveys among staff and students to gather valuable information that guides planning, performance monitoring, and strategic innovation.</p>
+
+  <h4>Roles and Responsibilities:</h4>
+  <ul>
+    <li><strong>Conceptualization and Implementation of Research Studies:</strong> Plan and manage strategic research initiatives across WSU.</li>
+    <li><strong>Institutional Surveys:</strong> Design, run, and evaluate surveys aligned with institutional goals.</li>
+    <li><strong>Coordination of Research Activities:</strong> Oversee all stages of survey execution and reporting.</li>
+    <li><strong>Key Performance Indicators (KPIs):</strong> Link survey data to institutional performance measures.</li>
+    <li><strong>Strategic Advantages and Innovation:</strong> Use research to position WSU for leadership and innovation.</li>
+    <li><strong>Responsive Decision-Making:</strong> Conduct timely, relevant research to inform high-level decisions and respond to trends.</li>
+  </ul>
+
+  <p style="text-align: justify;">This unit acts as a decision-support engine for WSU, ensuring decisions are informed by high-quality evidence and aligned with the university’s strategic direction.</p>
+
+    </section>
+
+
+</body>
+
+</html>

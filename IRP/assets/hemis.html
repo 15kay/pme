@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+
+           <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="assets/about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional
+                                        Efficiency</a></li>
+                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional
+                                        Research</a></li>
+                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
+                                <li><a href="abi.html" class="dropdown-link">Analytics & Business
+                                        Intelligence</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>HEMIS</h1>
+        <p>Welcome to Higher Education Management Information System</p>
+        <nav class="section-nav">
+            <ul>
+                <li><a href="../IR/dashboard.html" class="section-link">View Dashboards</a></li>
+                <li><a href="../IR/reports.html" class="section-link">View Reports</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+        <!-- HEMIS -->
+        <h2>Higher Education Management Information Systems (HEMIS)</h2>
+        <p style="text-align: justify;">
+            The HEMIS function is responsible for maintaining the academic structure of the university and ensuring
+            compliance with the Programme Qualification Mix (PQM). It manages academic programme approval documentation,
+            collaborates with Academic Planning and Quality Management, and facilitates applications under the Higher
+            Education Qualification Sub-Framework (HEQSF).
+        </p>
+        <p style="text-align: justify;">
+            It also ensures the timely submission of HEMIS data to the Department of Higher Education and Training
+            (DHET), which enables the university to claim its state subsidy, a major source of institutional funding.
+            Furthermore, HEMIS provides critical data for planning, research, and responding to internal and external
+            queries.
+        </p>
+
+        <h4>Roles and Responsibilities:</h4>
+        <ul>
+            <li><strong>HEMIS Reporting, Training, and Awareness:</strong> Conduct data reporting, submission to DHET,
+                and host training and awareness initiatives on HEMIS procedures.</li>
+            <li><strong>Academic Structure Maintenance:</strong> Maintain the integrity of academic records, programmes,
+                and qualifications in alignment with university and national frameworks.</li>
+            <li><strong>Space Maintenance:</strong> Manage the physical infrastructure data of the institution, ensuring
+                optimal space utilisation and compliance.</li>
+            <li><strong>Reports for University-wide Initiatives:</strong> Generate reports to support accreditation,
+                strategic planning, and annual reporting.</li>
+            <li><strong>Data Provision for Institutional Planning:</strong> Deliver accurate data for institutional
+                planning, policy-making, and decision support, in collaboration with relevant departments.</li>
+            <li><strong>Training and Technical Support:</strong> Provide hands-on training and technical support to
+                staff and students for effective data system usage.</li>
+        </ul>
+
+        <p style="text-align: justify;">
+            The HEMIS unit is a cornerstone of institutional efficiency, ensuring that data flows securely and
+            accurately to support compliance, planning, and strategic growth. Its work directly supports funding
+            acquisition and enhances data literacy across the university.
+        </p>
+    </section>
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const sidebar = document.getElementById("sidebar");
+            const closeBtn = document.getElementById("closeBtn");
+
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.toggle("show");
+                hamburger.classList.toggle("active");
+                // Toggle aria-expanded for accessibility
+                const expanded = hamburger.getAttribute("aria-expanded") === "true";
+                hamburger.setAttribute("aria-expanded", String(!expanded));
+            });
+
+            closeBtn.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                hamburger.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+
+            // Close sidebar if clicking outside
+            window.addEventListener("click", (e) => {
+                if (
+                    sidebar.classList.contains("show") &&
+                    !sidebar.contains(e.target) &&
+                    !hamburger.contains(e.target)
+                ) {
+                    sidebar.classList.remove("show");
+                    hamburger.classList.remove("active");
+                    hamburger.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+    </script> -->
+</body>
+
+</html>

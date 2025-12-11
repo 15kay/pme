@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="/AcaPlan/index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="academic_activity.html" class="dropdown-link">Academic Activity
+                                        Planning</a></li>
+
+                                <li><a href="programme_development.html" class="dropdown-link">Programme
+                                        Development & Accreditation</a></li>
+
+                                <li><a href="university_liaison.html" class="dropdown-link">University
+                                        Liaison</a></li>
+
+                                <li><a href="strategic_advisory.html" class="dropdown-link">Strategic
+                                        Advisory</a></li>
+
+                                <li><a href="coordination_leadership.html" class="dropdown-link">Coordination &
+                                        Leadership</a></li>
+                            </ul>
+                        </li>
+
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+ <section class="contact-hero">
+    <br>
+    <h1>Programme Development & Accreditation</h1>
+    <p>Ensuring Quality, Compliance, and Strategic Academic Growth</p>
+
+    <nav class="section-nav">
+        <ul>
+            <li><a href="academic_activity.html" class="section-link">Academic Activity Planning</a></li>
+            <li><a href="university_liaison.html" class="section-link">University Liaison</a></li>
+            <li><a href="strategic_advisory.html" class="section-link">Strategic Advisory</a></li>
+            <li><a href="coordination_leadership.html" class="section-link">Coordination & Leadership</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+
+    <h2>Programme Development & Accreditation</h2>
+
+    <p style="text-align: justify;">
+        Programme Development & Accreditation is a central function within Academic Planning responsible for 
+        ensuring that all qualifications offered by Walter Sisulu University are relevant, compliant, sustainable, 
+        and aligned with institutional and national priorities. This function ensures that new and existing 
+        academic programmes meet regulatory requirements set by DHET, CHE, SAQA, and the Higher Education 
+        Qualifications Sub-Framework (HEQSF).
+    </p>
+
+    <p style="text-align: justify;">
+        By working closely with faculties and regulatory bodies, the Directorate facilitates the end-to-end 
+        lifecycle of programme development—from conceptualisation and curriculum design to accreditation, 
+        registration, and periodic review. This ensures the continuous improvement and expansion of WSU’s academic 
+        portfolio.
+    </p>
+
+    <h4>Roles and Responsibilities:</h4>
+
+    <ul>
+        <li><strong>New Programme Conceptualisation:</strong> Support faculties in designing new qualifications aligned with strategic institutional goals and labour-market demand.</li>
+
+        <li><strong>Accreditation Processes:</strong> Facilitate the submission, monitoring, and approval of programme applications through CHE, DHET, and SAQA.</li>
+
+        <li><strong>HEQSF Compliance:</strong> Ensure that all academic programmes adhere to the standards and requirements of the Higher Education Qualifications Sub-Framework.</li>
+
+        <li><strong>Programme Viability Studies:</strong> Conduct academic and financial viability analyses to determine feasibility and sustainability of proposed programmes.</li>
+
+        <li><strong>Programme Review & Re-accreditation:</strong> Lead institutional processes related to the renewal and continuous improvement of programme accreditation.</li>
+
+        <li><strong>PQM Management:</strong> Align new programme developments with the overall Programme Qualification Mix (PQM) and institutional academic strategy.</li>
+
+        <li><strong>Stakeholder Engagement:</strong> Coordinate between faculties, national regulatory bodies, and internal directorates to ensure smooth programme development and compliance.</li>
+    </ul>
+
+    <p style="text-align: justify;">
+        Through rigorous programme development and accreditation oversight, this function ensures that WSU delivers 
+        high-quality, relevant, and future-focused academic offerings that strengthen the institution’s academic 
+        reputation and strategic impact.
+    </p>
+
+</section>
+
+
+
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const sidebar = document.getElementById("sidebar");
+            const closeBtn = document.getElementById("closeBtn");
+
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.toggle("show");
+                hamburger.classList.toggle("active");
+                // Toggle aria-expanded for accessibility
+                const expanded = hamburger.getAttribute("aria-expanded") === "true";
+                hamburger.setAttribute("aria-expanded", String(!expanded));
+            });
+
+            closeBtn.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                hamburger.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+
+            // Close sidebar if clicking outside
+            window.addEventListener("click", (e) => {
+                if (
+                    sidebar.classList.contains("show") &&
+                    !sidebar.contains(e.target) &&
+                    !hamburger.contains(e.target)
+                ) {
+                    sidebar.classList.remove("show");
+                    hamburger.classList.remove("active");
+                    hamburger.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+    </script> -->
+</body>
+
+</html>

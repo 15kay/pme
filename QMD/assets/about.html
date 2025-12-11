@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    .Introduction {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 3rem 2rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.65;
+        font-size: 1.125rem;
+    }
+
+    /* Headings */
+    .Introduction h1,
+    h2 {
+        color: #0d3b66;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.02em;
+    }
+
+    .Introduction h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: 'Georgia', serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .Introduction h2 {
+        font-size: 1.8rem;
+        /* margin-top: 3.5rem; */
+        /* border-bottom: 3px solid #242426; */
+        /* padding-bottom: 0.4rem; */
+        font-family: 'Segoe UI Semibold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    /* Paragraphs */
+    .Introduction p {
+        color: #3b3b3b;
+        margin-bottom: 1.25rem;
+        font-weight: 400;
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    /* Lists */
+    .Introduction ul {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+        color: #3b3b3b;
+        list-style-type: disc;
+        text-align: justify;
+    }
+
+    .Introduction ul li {
+        margin-bottom: 0.85rem;
+        line-height: 1.5;
+    }
+
+    strong {
+        color: #0d3b66;
+        font-weight: 600;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .Introduction {
+            padding: 2rem 1rem;
+            font-size: 1rem;
+        }
+
+        .Introduction h1 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        .Introduction h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+    }
+</style>
+
+<body>
+  
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link active">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
+                                        Developement</a></li>
+                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
+                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.htmL" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+<br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>About Us</h1>
+        <p>Welcome to the Quality Management Directorate</p>
+    </section>
+
+    <section class="Introduction">
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                At Walter Sisulu University, our vision of becoming “An impactful, technology-infused African
+                University”
+                is anchored in a strong culture of quality, excellence, and continuous improvement. The Quality
+                Management
+                Directorate (QMD) plays a central role in supporting this vision by ensuring that all academic and
+                support
+                functions operate in alignment with national standards, regulatory requirements, and the institution’s
+                strategic priorities.
+            </p>
+            <p>
+                In a rapidly evolving higher education landscape—characterised by increasing complexity, accountability
+                demands, and the need for responsive teaching and learning—the role of QMD has become more critical than
+                ever. The Directorate ensures that the university maintains robust quality assurance systems, embraces
+                continuous enhancement, and fosters a culture of reflection, innovation, and academic integrity.
+            </p>
+            <p>
+                <strong>For more information:</strong>
+                <a href="IQMSF Approved Version 16 September 2024 Last Version (1).pdf" target="_blank" rel="noopener noreferrer"
+                    class="download-link">
+                    Download the QMD Overview (PDF)
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>The Rationale for the Quality Management Directorate</h2>
+            <p>
+                The Quality Management Directorate is essential to the success of WSU’s mission, providing the
+                structure,
+                standards, and oversight needed to ensure institutional excellence. Its significance lies in its ability
+                to
+                safeguard the integrity of academic offerings, monitor performance, and guide the institution in
+                developing
+                mature, integrated, and coherent quality systems.
+            </p>
+            <ul>
+                <li><strong>Promoting a Quality Culture:</strong> QMD leads the promotion of a campus-wide quality
+                    culture,
+                    ensuring that all faculties, departments, and support units understand and embrace their roles in
+                    upholding excellence.</li>
+                <li><strong>Ensuring Standards & Compliance:</strong> The Directorate ensures alignment with CHE
+                    standards,
+                    HEQSF requirements, institutional policies, and national legislative frameworks, safeguarding the
+                    credibility of academic programmes and institutional operations.</li>
+                <li><strong>Supporting Continuous Improvement:</strong> Through reviews, monitoring, and feedback
+                    cycles,
+                    QMD empowers units to identify areas for improvement and implement targeted interventions that
+                    elevate
+                    performance.</li>
+                <li><strong>Driving Accountability:</strong> QMD ensures clear governance pathways and accountability
+                    structures that reinforce institutional effectiveness and responsible stewardship of academic
+                    quality.</li>
+                <li><strong>Enhancing Learning, Teaching & Research Quality:</strong> The Directorate evaluates the
+                    effectiveness of academic programmes, modules, and faculty quality systems, enabling
+                    evidence-informed
+                    enhancement of teaching, learning, research, and community engagement.</li>
+                <li><strong>Capacity Development & Quality Promotion:</strong> Through training, workshops, and quality
+                    conversations, the Directorate builds institutional capacity and encourages reflective,
+                    data-informed
+                    decision-making.</li>
+                <li><strong>Integrated Quality Systems:</strong> QMD harmonises processes across the
+                    institution—academic
+                    planning, teaching & learning, quality promotion, and support services—ensuring consistency,
+                    coherence,
+                    and strategic alignment.</li>
+            </ul>
+            <p>
+                As WSU strengthens its position as a technology-infused African university, the Directorate remains
+                committed
+                to embedding quality into every process, decision, and initiative—ensuring a resilient, responsive, and
+                future-ready institution.
+            </p>
+        </section>
+
+        <section>
+            <h2>Vision</h2>
+            <p>
+                To enable excellence by fostering a mature, coherent, and integrated quality management system that
+                promotes
+                continuous improvement, accountability, and innovation across all spheres of the university.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mission</h2>
+            <p>
+                Our mission is to lead, coordinate, and enhance quality assurance and quality management across WSU by
+                building
+                sustainable systems, empowering stakeholders, and ensuring alignment with national standards and
+                institutional
+                strategic priorities. We are dedicated to:
+            </p>
+            <ul>
+                <li><strong>Strengthening Quality Systems:</strong> Develop, implement, and monitor integrated quality
+                    management systems across faculties, departments, and support units.</li>
+                <li><strong>Facilitating Programme & Institutional Reviews:</strong> Coordinate internal and external
+                    reviews to ensure programme relevance, compliance, and continuous improvement.</li>
+                <li><strong>Supporting Quality Improvement:</strong> Guide the development, implementation, and
+                    monitoring of Quality Improvement Plans (QIPs) across all levels of the university.</li>
+                <li><strong>Ensuring Policy Implementation:</strong> Promote and monitor adherence to quality-related
+                    policies, guidelines, and procedures.</li>
+                <li><strong>Driving Quality Promotion:</strong> Encourage dialogue, capacity development, and training
+                    activities that strengthen the institutional quality culture.</li>
+                <li><strong>Aligning with External Agencies:</strong> Support institutional engagements with CHE, SAQA,
+                    DHET, and professional bodies to ensure compliance and accreditation success.</li>
+                <li><strong>Supporting Governance Structures:</strong> Inform decision-making by providing quality
+                    insights
+                    to Senate, SQAC, Council, and other governance bodies.</li>
+            </ul>
+            <p>
+                Through these commitments, the Directorate ensures that WSU maintains excellence in teaching, learning,
+                research, community engagement, and administrative support.
+            </p>
+        </section>
+
+        <section>
+            <h2>Values</h2>
+            <p>
+                The Quality Management Directorate upholds the values enshrined in the University's strategic plan,
+                including
+                honesty and integrity, quality and excellence, respect, and Ubuntu. Additionally, the Directorate is
+                guided by
+                the following values:
+            </p>
+            <ul>
+                <li><strong>Accountability:</strong> Encouraging responsibility and ownership of quality standards
+                    across
+                    the institution.</li>
+                <li><strong>Integration:</strong> Promoting coherent, harmonized systems that connect academic and
+                    support
+                    functions.</li>
+                <li><strong>Fitness for Purpose:</strong> Ensuring that programmes, services, and processes meet their
+                    intended objectives.</li>
+                <li><strong>Fitness of Purpose:</strong> Aligning quality activities with institutional and national
+                    imperatives.</li>
+                <li><strong>Innovation:</strong> Embracing adaptive, technology-driven approaches to enhance quality
+                    practices.</li>
+                <li><strong>Simplification:</strong> Streamlining processes and reducing complexity in quality
+                    management
+                    systems.</li>
+                <li><strong>Collaboration:</strong> Working jointly with faculties, departments, and support units to
+                    achieve shared quality goals.</li>
+            </ul>
+            <p>
+                These values represent our unwavering commitment to excellence, integrity, and continuous improvement,
+                positioning QMD as a key driver of institutional quality at Walter Sisulu University.
+            </p>
+        </section>
+    </section>
+
+
+</body>
+
+</html>

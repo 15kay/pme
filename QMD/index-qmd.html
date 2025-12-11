@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    .latest-section {
+        padding: 4rem 1.5rem;
+        background-color: var(--bg-secondary);
+        color: var(--text);
+        text-align: center;
+    }
+
+
+    .latest-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .latest-item {
+        background: #fff;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        /* Add this: */
+
+    }
+
+    .latest-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 0.75rem;
+        border-radius: 4px;
+        display: block;
+    }
+
+    .latest-content {
+        padding: 1rem 1.5rem 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .latest-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-bottom: 0.5rem;
+        text-transform: none;
+    }
+
+    .latest-desc {
+        font-size: 1rem;
+        color: var(--text);
+        opacity: 0.75;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .latest-btn {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        background-color: #0d3b66;
+        color: #fff;
+        border-radius: var(--radius);
+        font-size: 0.95rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        align-self: flex-start;
+    }
+
+    .latest-btn:hover {
+        background-color: var(--primary-dark);
+        color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .latest-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .latest-img {
+            height: 200px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Page Loader -->
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
+    </div>
+
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="assets/img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../QMD/index-qmd.html" class="nav-link active">Home</a></li>
+                        <li><a href="assets/about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="assets/quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
+                                        Developement</a></li>
+                                <li><a href="assets/qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
+                                <li><a href="assets/qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="assets/news.html" class="nav-link">News</a></li>
+                        <li><a href="assets/team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="assets/contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Quality Management Directorate</h2>
+            <p>Ensurig Institutional standards, compliance, and continuous improvement to maintain excellence and
+                credibility.</p>
+            <div class="hero-buttons">
+                <a href="assets/about.html" class="btn-primary">Learn More</a>
+                <a href="assets/contact.html" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/img/team.jpeg" alt="Institutional Research & Planning at WSU">
+                </div>
+                <div class="about-content">
+                    <h3>Quality Management Directorate (QMD) at WSU</h3>
+
+                    <p style="text-align: justify;">
+                        The Quality Management Directorate (QMD) serves as the custodian of
+                        institutional quality at Walter Sisulu University, ensuring that all
+                        academic and support functions align with national standards,
+                        CHE requirements, and WSU’s Vision 2030. Its work strengthens
+                        institutional coherence, compliance, and continuous improvement
+                        across teaching and learning, research, and community engagement.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Core activities include the coordination of internal and external quality reviews,
+                        facilitation of programme and qualification evaluations, monitoring of Quality Improvement
+                        Plans (QIPs), and the implementation of policies that support continuous quality enhancement.
+                        QMD also ensures that standards, guidelines, templates, and criteria are consistently applied
+                        across faculties, departments, and support units.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        The Directorate collaborates closely with other university entities, such as Institutional
+                        Research & Planning, Academic Planning, and the Directorate of Learning and Teaching, to
+                        provide evidence-based insights that support academic excellence, student success,
+                        and institutional effectiveness. Through this integrated approach, QMD embeds a
+                        culture of accountability, reflection, and improvement across the institution.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Recent quality initiatives include comprehensive programme reviews, faculty quality assessments,
+                        themed support-unit evaluations, and the rollout of WSU’s integrated Quality Improvement Plans.
+                        These outputs contribute directly to the Institutional QA Dashboard and have informed
+                        strategic decisions adopted by Senate and other governance structures.
+                    </p>
+
+                    <!-- <p>
+                        <strong>For more information:</strong>
+                        <a href="assets/reports/irp-overview-2024.pdf" target="_blank" rel="noopener noreferrer"
+                            class="download-link">
+                            Download the IRP Unit Overview (PDF)
+                        </a>
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-events-container">
+        <!-- News Section -->
+        <div class="news-section">
+            <h2 class="section-title">Latest News</h2>
+            <div class="news-cards">
+                <div class="news-card">
+                    <img src="assets/img/news1.jpeg" alt="QMD News 1" class="news-image" />
+                    <div class="news-content">
+                        <h3 class="news-title">QMD Launches Institutional QA Dashboard</h3>
+                        <p class="news-description">
+                            The Quality Management Directorate has unveiled the new QA Dashboard, enabling real-time
+                            tracking of review outcomes, QIPs, and institutional performance indicators.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="assets/img/news2.jpeg" alt="QMD News 2" class="news-image" />
+                    <div class="news-content">
+                        <h3 class="news-title">2025 Internal Review Cycle Successfully Completed</h3>
+                        <p class="news-description">
+                            This year’s programme, module, and faculty reviews have been finalised, with QMD confirming
+                            stronger alignment to CHE quality standards across multiple faculties.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="assets/img/news3.jpeg" alt="QMD News 3" class="news-image" />
+                    <div class="news-content">
+                        <h3 class="news-title">QMD Hosts Quality Promotion & Capacity Workshop</h3>
+                        <p class="news-description">
+                            Quality practitioners and academic leaders gathered for a training workshop focused on PDCA
+                            implementation, self-evaluation, and enhancing institutional quality culture.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="view-more-btn">View More News</button>
+        </div>
+        <!-- Events Section -->
+        <aside class="events-section">
+            <h2 class="section-title">Upcoming QMD Events</h2>
+            <ul class="event-list">
+                <li><strong>12 Feb:</strong> Quality Review Panellist Training Workshop</li>
+                <li><strong>26 Mar:</strong> Faculty Self-Evaluation Report (SER) Submission Deadline</li>
+                <li><strong>08 Apr:</strong> Institutional Quality Improvement Plan (IQIP) Progress Review</li>
+                <li><strong>19 May:</strong> University-Wide Quality Promotion & Awareness Day</li>
+            </ul>
+        </aside>
+
+    </section>
+    <section id="latest-reports" class="latest-section">
+    <div class="container">
+        <h2 class="section-title">Latest Reports & Dashboards</h2>
+
+        <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        ">
+            <h3 style="font-size: 2rem; color: #555; font-weight: 500;">
+                🚧 Coming Soon 🚧 <br>
+                <span style="font-size: 1rem; color: #777;">
+                    New Quality Management reports and dashboards are currently being finalised.
+                </span>
+            </h3>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- <section id="latest-reports" class="latest-section">
+        <div class="container">
+            <h2 class="section-title">Latest Reports & Dashboards</h2>
+            <div class="latest-grid">
+                <article class="latest-item">
+                    <img src="assets/img/follow-up.png" alt="Report 1" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">2024 Student At Risk</h3>
+                        <p class="latest-desc" style="text-align: justify;">Comprehensive analysis of graduate outcomes
+                            and employment trends. Identifying and supporting at-risk students remains a core focus of
+                            our institution’s efforts to foster
+                            equity, inclusion, and academic achievement</p>
+                        <a href="reports/Student at Risk Survey V3-FINAL.pdf" class="latest-btn"
+                            target="_blank">View</a>
+                    </div>
+                </article>
+
+                <article class="latest-item">
+                    <img src="assets/img/stop-out.png" alt="Dashboard 1" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">Stop Out Survey</h3>
+                        <p class="latest-desc" style="text-align: justify;">Understanding the reasons behind student
+                            stop-outs is essential for developing
+                            effective strategies to improve retention, re-engagement, and overall student success.</p>
+                        <a href="reports/Stop-out Survey. V3-FINAL.pdf class=" class="latest-btn"
+                            target="_blank">View</a>
+                    </div>
+                </article>
+
+                <article class="latest-item">
+                    <img src="assets/img/graduation.png" alt="Report 2" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">Graduate Destination Survey</h3>
+                        <p class="latest-desc" style="text-align: justify;">Class of 2024 – Summer Graduations. This
+                            report provides valuable insights into our graduates' career trajectories and further study
+                            pursuits,
+                            offering a comprehensive overview of their transition from higher education into the
+                            professional world.</p>
+                        <a href="reports/Graduate Destination Survey V4-FINAL.pdf" class="latest-btn"
+                            target="_blank">View</a>
+                    </div>
+                </article>
+
+                <article class="latest-item">
+                    <img src="assets/img/postgrad.png" alt="Report 2" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">Postgraduate Experience Survey 2024</h3>
+                        <p class="latest-desc" style="text-align: justify;">This report marks a significant step in our
+                            ongoing efforts to enhance postgraduate education,
+                            ensuring our students receive the highest support, resources, and academic and professional
+                            growth
+                            opportunities.</p>
+                        <a href="reports/Post Graduate Survey V3-FINAL.pdf" class="latest-btn" target="_blank">View</a>
+                    </div>
+                </article>
+
+                <article class="latest-item">
+                    <img src="assets/img/undergrad.png" alt="Report 2" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">Undergraduate Experience Survey 2024</h3>
+                        <p class="latest-desc" style="text-align: justify;"> first Undergraduate Experience Survey 2024
+                            Report a milestone
+                            in our commitment to understanding and enhancing the student journey at WSU. This inaugural
+                            survey marks a significant step forward in our efforts to listen, learn, and respond to the
+                            needs of our
+                            undergraduate community</p>
+                        <a href="reports/Undergraduate Survey Report (V5).pdf" class="latest-btn"
+                            target="_blank">View</a>
+                    </div>
+                </article>
+
+                <article class="latest-item">
+                    <img src="assets/img/Employment.png" alt="Report 2" class="latest-img" />
+                    <div class="latest-content">
+                        <h3 class="latest-title">Employment Assessment Report 2024</h3>
+                        <p class="latest-desc">Insights into employment rates and skills demand across sectors.</p>
+                        <a href="reports/Employability Assessment Report Final-WSU-FINAL-June-2025.pdf"
+                            class="latest-btn" target="_blank">View</a>
+                    </div>
+                </article>
+                <!-- Add more reports/dashboards as needed -->
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.php" class="footer-logo">
+                        Quality Management
+                        
+                        <span> Directorate </span>
+                    </a>
+                    <p class="footer-description">Ensurig Institutional standards, compliance, and continuous improvement to maintain excellence and
+                credibility.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="assets/team.php">Meet Our Team</a></li>
+                        <li><a href="assets/news.php">Our Reports</a></li>
+                        <li><a href="assets/news.php">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Units</h4>
+                    <ul>
+                        <li><a href="assets/insti_efficiency.php">Quality Promotion and Capacity
+                                        Developement</a></li>
+                        <li><a href="assets/stu.php">Quality Enhancement and Monitoring</a></li>
+                        <li><a href="assets/hemis.php">Quality Assurance</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>R102, Potsdam, East London, 5200</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+27722002639">+27 (0)47 502 2849</a>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>Monday - Friday, 08 am - 16:00 pm</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:irp@wsu.ac.za">irp@wsu.ac.za</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 PME, Walter Sisulu University. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

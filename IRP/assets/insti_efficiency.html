@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - Institutional Research Intelligence</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<style>
+    .Introduction {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 3rem 2rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.65;
+        font-size: 1.125rem;
+    }
+
+    .Introduction h1,
+    h2 {
+        color: #0d3b66;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.02em;
+    }
+
+    .Introduction h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    .Introduction h2 {
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
+    }
+
+    .Introduction p {
+        color: #3b3b3b;
+        margin-bottom: 1.25rem;
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    .Introduction ul {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+        color: #3b3b3b;
+        list-style-type: disc;
+        text-align: justify;
+    }
+
+    .Introduction ul li {
+        margin-bottom: 0.85rem;
+        line-height: 1.5;
+    }
+
+    strong {
+        color: #0d3b66;
+        font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+        .Introduction {
+            padding: 2rem 1rem;
+            font-size: 1rem;
+        }
+
+        .Introduction h1 {
+            font-size: 1.8rem;
+        }
+
+        .Introduction h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<body>
+              <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="assets/about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional
+                                        Efficiency</a></li>
+                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional
+                                        Research</a></li>
+                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
+                                <li><a href="abi.html" class="dropdown-link">Analytics & Business
+                                        Intelligence</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>IR</h1>
+        <p>Welcome to Institutional Intelligence</p>
+    </section>
+    <section class="Introduction">
+        <h2>Institutional Research Intelligence</h2>
+        <p>
+            The Institutional Research Intelligence function at WSU conducts regular surveys among staff and students to gather valuable information about the institution. This information aids in institutional planning, identifies areas requiring action, and offers insights for decision-making. Additionally, the function conducts ad hoc surveys to investigate specific issues that necessitate in-depth analysis. It provides expert guidance and advice to various staff members on matters related to institutional research, particularly in the application and interpretation of survey data.
+        </p>
+
+        <h2>Roles and Responsibilities</h2>
+        <ul>
+            <li><strong>Conceptualization and Implementation of Research Studies:</strong> Develop and execute a comprehensive plan for institutional research studies across WSU. Identify research objectives, methodologies, and data collection strategies.</li>
+            <li><strong>Institutional Surveys:</strong> Conduct various types of institutional surveys for academic and administrative units across WSU. Ensure the design, administration, and analysis of surveys are consistent and aligned with institutional goals.</li>
+            <li><strong>Coordination of Research Activities:</strong> Establish, maintain, and coordinate WSU's institutional research activities. Oversee the collection, analysis, interpretation, and reporting of data from institutional surveys.</li>
+            <li><strong>Key Performance Indicators (KPIs):</strong> Utilize survey data to provide insights and metrics for evaluating institutional Key Performance Indicators (KPIs). Collaborate with stakeholders to assess WSU's performance against set benchmarks.</li>
+            <li><strong>Strategic Advantages and Innovation:</strong> Identify and leverage WSU's comparative advantages through data-driven insights. Promote innovation and leadership by utilising institutional research to maximize impact.</li>
+            <li><strong>Responsive Decision-Making:</strong> Empower WSU to respond effectively to strategic needs and emerging trends through the application of institutional research and analytics. Stay informed about trends in higher education and conduct studies on issues impacting the university's operations and objectives.</li>
+        </ul>
+
+        <p>
+            The Institutional Research Intelligence function serves as a vital resource for WSU, enabling informed decision-making, strategic planning, and continuous improvement by providing timely and accurate data and insights.
+        </p>
+    </section>
+</body>
+
+</html>

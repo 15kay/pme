@@ -144,11 +144,18 @@ img {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--border);
 }
+.header-bottom1 {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  height: 40px;
+        }
 
 .header-bottom {
   padding: 0.75rem 0;
-  background-color: black;
-  color: white;
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
   position: relative;
 }
 
@@ -342,6 +349,7 @@ li {
   height: 2px;
   background-color: var(--accent);
   border-radius: 2px;
+ 
 }
 
 /* DROPDOWN */
@@ -430,12 +438,12 @@ body {
 .hamburger-icon {
   font-size: 1.5rem;
   line-height: 1;
-  color: white;
+  color: rgb(0,0,0);
 }
 
 .hamburger-label {
   display: inline-block;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Show on mobile only */
@@ -444,7 +452,7 @@ body {
     display: flex;
     margin-left: auto;
     margin-right: 1rem;
-    color: white; /* Ensure it's white on dark backgrounds */
+    color: rgb(1, 1, 1); /* Ensure it's white on dark backgrounds */
   }
 }
 
@@ -460,8 +468,8 @@ body {
   left: -280px;
   width: 280px;
   height: 100vh;
-  background-color: #1e1f21;
-  color: white;
+  background-color: #f4f4f4;
+  color: rgb(0, 0, 0);
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
@@ -479,7 +487,7 @@ body {
   gap: 20px;
 }
 #sidebar .nav-link {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   text-decoration: none;
   padding: 10px 16px;
@@ -644,36 +652,60 @@ body {
 
 
 
-/* Hero Section */
-.hero-section {
-  padding: 180px 0 100px;
-  /* background: linear-gradient(to top, #011d42 23%, #004aad 95%); */
-  color: white;
-  text-align: center;
-}
+ /* ============================
+           HERO SECTION
+        ============================ */
+        .hero-section {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to top, rgba(29,25,25,0.6), rgba(10, 14, 18, 0.21)), 
+                        url('/IRP/assets/img/hero.png') center/cover no-repeat;
+                        
+        }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+        .hero-section h2 {
+            font-size: 3rem;
+            margin-top: 160px;
+        }
 
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
 
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
+        .hero-buttons a {
+            padding: 12px 28px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
+        .btn-primary {
+            background-color: #002f6c;
+            color: white;
+        }
 
+        .btn-primary:hover {
+            background-color: #0041a3;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #002f6c;
+            border: 2px solid #002f6c;
+        }
+
+        .btn-secondary:hover {
+            background-color: #002f6c;
+            color: white;
+        }
 /* About Section */
 .about-section {
   padding: 30px 0;
@@ -694,7 +726,7 @@ body {
 
 .about-content h3 {
   font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
   color: var(--dark-color);
 }
 

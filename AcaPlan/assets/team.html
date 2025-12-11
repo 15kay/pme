@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+<style>
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --text: #1e293b;
+        --text-light: #64748b;
+        --bg: #ffffff;
+        --bg-secondary: #f8fafc;
+        --border: #e2e8f0;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --radius: 0.375rem;
+    }
+    [data-theme="dark"] {
+        --bg-light: var(--bg-dark);
+        --card-bg: var(--card-bg-dark);
+        --text-dark: var(--text-light);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+ 
+
+    .team-section h2 {
+        text-align: center;
+        color: black;
+        margin-bottom: 2rem;
+    }
+
+    .team-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        position: relative;
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(33, 45, 76, 0.4);
+        margin-top: 1.5rem;
+    }
+
+    .card-content {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    .card h3 {
+        margin: 0.8rem 0 0.3rem;
+        font-size: 1.2rem;
+        color: var(--primary);
+    }
+
+    .card .title {
+        font-style: italic;
+        color: #666;
+        font-weight: 500;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .card .email a {
+        color: var(--accent);
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .card .email a:hover {
+        text-decoration: underline;
+    }
+
+    .bio-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(33, 45, 76, 0.519);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Hover for desktop */
+    @media (hover: hover) and (pointer: fine) {
+        .card:hover .bio-overlay {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    /* Click for mobile */
+    .card.active .bio-overlay {
+        opacity: 1 !important;
+        pointer-events: all !important;
+    }
+
+    @media (max-width: 600px) {
+
+        .card img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+</style>
+
+<body>
+
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="/AcaPlan/index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="academic_activity.html" class="dropdown-link">Academic Activity
+                                        Planning</a></li>
+
+                                <li><a href="programme_development.html" class="dropdown-link">Programme
+                                        Development & Accreditation</a></li>
+
+                                <li><a href="university_liaison.html" class="dropdown-link">University
+                                        Liaison</a></li>
+
+                                <li><a href="strategic_advisory.html" class="dropdown-link">Strategic
+                                        Advisory</a></li>
+
+                                <li><a href="coordination_leadership.html" class="dropdown-link">Coordination &
+                                        Leadership</a></li>
+                            </ul>
+                        </li>
+
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link active">Meet Our Team</a></li>
+                        <li><a href="contact.html"  class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>Meet Our Team</h1>
+        <p></p>
+    </section>
+    <section>
+        <main class="team-section">
+            <br>
+            <section class="section top-manager">
+                <!-- <h2>Top Manager</h2> -->
+                <div class="team-grid">
+                    <div class="card" onclick="toggleBio(this)">
+                        <img src="img/mrkw.png" alt="Ntsundeni Louis Mapatagane" />
+                        <div class="card-content">
+                            <h3>Francis Kwahenee</h3>
+                            <p class="title">Director: Academic Planning</p>
+                            <p class="email"><i class="fas fa-envelope"></i> <a
+                                    href="mailto:fkwahene@wsu.ac.za">fkwahene@wsu.ac.za</a></p>
+                        </div>
+                        <div class="bio-overlay">
+                            provides strategic leadership, coordination,
+                            and oversight for all academic planning activities 
+                            at the university. The role ensures that academic programmes, 
+                            enrolment planning, curriculum structures, and institutional
+                            academic strategy are fully aligned with national policy, 
+                            university priorities, and accreditation requirements.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="section middle-managers">
+                <BR></BR>
+                <h2>Line Managers</h2>
+                <div class="team-grid">
+
+                    <div class="card" onclick="toggleBio(this)">
+                        <img src="../STU/pictures/image(1).png" alt="Dr. Munienge Mbodila" />
+                        <div class="card-content">
+                            <h3>Dr. Munienge Mbodila</h3>
+                            <p class="title">Student Tracking & Institutional Research Manager</p>
+                            <p class="email"><i class="fas fa-envelope"></i> <a
+                                    href="mailto:mmbodila@wsu.ac.za">mmbodila@wsu.ac.za</a></p>
+                        </div>
+                        <div class="bio-overlay">
+                            Oversees student data to monitor academic progress and outcomes, enabling evidence-based
+                            decisions and improved educational quality.
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleBio(this)">
+                        <img src="img/image.png" alt="Mr. Siyabonga Kweza" />
+                        <div class="card-content">
+                            <h3>Mr. Siyabonga Kweza</h3>
+                            <p class="title">HEMIS Manager</p>
+                            <p class="email"><i class="fas fa-envelope"></i> <a
+                                    href="mailto:skweza@wsu.ac.za">skweza@wsu.ac.za</a></p>
+                        </div>
+                        <div class="bio-overlay">
+                            Manages HEMIS data aligned with national standards to ensure accurate reporting for
+                            planning, compliance, and institutional effectiveness.
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="toggleBio(this)">
+                        <img src="img/image.png" alt="Mr. Siyabonga Nano" />
+                        <div class="card-content">
+                            <h3>Mr. Siyabonga Nano</h3>
+                            <p class="title">Analytics & Business Intelligence Manager</p>
+                            <p class="email"><i class="fas fa-envelope"></i> <a
+                                    href="mailto:snano@wsu.ac.za">snano@wsu.ac.za</a></p>
+                        </div>
+                        <div class="bio-overlay">
+                            Leads recruitment, employee engagement, and builds an inclusive organizational culture.
+                        </div>
+                    </div>
+
+                </div>
+            </section> -->
+            <section class="section middle-managers">
+    <br><br>
+    <h2>Team</h2>
+
+    <div class="coming-soon" style="
+        text-align: center; 
+        padding: 3rem 1rem; 
+        font-size: 1.4rem; 
+        font-weight: 600; 
+        color: #555;">
+        Coming Soon...
+    </div>
+</section>
+
+        </main>
+
+        <script>
+            function toggleBio(card) {
+                // Only enable toggle on touch devices (no hover)
+                if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+                    card.classList.toggle('active');
+                }
+            }
+        </script>
+</body>
+
+</html>

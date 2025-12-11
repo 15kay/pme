@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WSU Quality Management & Directorate</title>
+    
+    <!-- External CSS and Font Awesome -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* ============================
+           BASE STYLES
+        ============================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* ============================
+           HEADER TOP (LOGO + SEARCH)
+        ============================ */
+        .header-top {
+            padding: 12px 20px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 130px;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 6px;
+        }
+
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .search-button {
+            background: #002f6c;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* ============================
+           NAVIGATION BAR
+        ============================ */
+        .header-bottom,
+        .header-bottom1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links,
+        .nav-links1 {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            padding: 12px 0;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-link1 {
+            color: black;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #b7d4ff;
+        }
+
+        .nav-link1:hover {
+            color: #002f6c;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            display: none;
+            flex-direction: column;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-link {
+            padding: 10px 16px;
+            color: #002f6c;
+            transition: 0.3s;
+        }
+
+        .dropdown-link:hover {
+            background: #eef4ff;
+        }
+
+        .dropdown-icon {
+            margin-left: 5px;
+            transition: 0.3s;
+        }
+
+        .dropdown:hover .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        /* ============================
+           HERO SECTION
+        ============================ */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to top, rgba(29,25,25,0.6), rgba(10, 14, 18, 0.37)), 
+                        url('1.jpg') center/cover no-repeat;
+        }
+
+        .hero-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons a {
+            padding: 12px 28px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #002f6c;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0041a3;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: #002f6c;
+            border: 2px solid #002f6c;
+        }
+
+        .btn-secondary:hover {
+            background-color: #002f6c;
+            color: white;
+        }
+
+        /* ============================
+           MOBILE RESPONSIVE
+        ============================ */
+        @media(max-width: 900px) {
+            .nav-links, .nav-links1 {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-section h2 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- HEADER TOP -->
+        <div class="header-top">
+            <img src="../assets/img/logo.png" alt="WSU Logo" class="logo-img">
+
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <!-- NAVIGATION ROW 1 -->
+        <div class="header-bottom" style="background:#000;">
+            <ul class="nav-links">
+                <li><a href="pme.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+            </ul>
+        </div>
+
+        <!-- NAVIGATION ROW 2 -->
+        <div class="header-bottom1">
+            <ul class="nav-links1">
+                <li><a href="qua.html" class="nav-link1">Home</a></li>
+                <li><a href="about.php" class="nav-link1">About Us</a></li>
+                <li class="dropdown">
+                    <a class="nav-link1 dropdown-toggle">
+                        Core Functions <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="insti_efficiency.php" class="dropdown-link">Quality Promotion and Capacity Developement</a></li>
+                        <li><a href="stu.php" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
+                        <li><a href="hemis.php" class="dropdown-link">Quality Assurance</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.php" class="nav-link1">News</a></li>
+                <li><a href="team.php" class="nav-link1">Meet Our Team</a></li>
+                <li><a href="contact.php" class="nav-link1">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Quality Management Directorate</h2>
+            <p>Ensurig Institutional standards, compliance, and continuous improvement to maintain excellence and credibility.</p>
+            <div class="hero-buttons">
+                <a href="../assets/about.html" class="btn-primary">Learn More</a>
+                <a href="../assets/contact.html" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

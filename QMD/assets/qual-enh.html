@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+
+   <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
+                                        Developement</a></li>
+                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
+                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.htm" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+<br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>QEM</h1>
+        <p>Welcome to Quality Enhancement and Monitoring</p>
+        <!-- <nav class="section-nav">
+        <ul>
+            <li><a href="../IR/dashboard.html" class="section-link">View Dashboards</a></li>
+            <li><a href="../IR/reports.html" class="section-link">View Reports</a></li>
+        </ul>
+    </nav> -->
+    </section>
+
+   <section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+
+    <h2>Quality Enhancement and Monitoring</h2>
+
+    <h3>Institutional Quality Assurance & Continuous Improvement</h3>
+    <p style="text-align: justify;">
+        The Quality Enhancement and Monitoring (QEM) function ensures that all academic and support departments at WSU maintain high standards of quality through systematic monitoring, evaluation, and reporting. 
+        This function works in alignment with the Institutional Quality Management System Framework (IQMSF) to promote accountability, compliance, and continuous improvement across the university.
+    </p>
+
+    <h4>Roles and Responsibilities:</h4>
+    <ul>
+        <li><strong>Quality Monitoring and Evaluation:</strong> Conduct routine quality audits, reviews, and performance checks across academic and support departments.</li>
+        <li><strong>Implementation of the IQMSF:</strong> Oversee the application of the Institutional Quality Management System Framework across departments and faculties.</li>
+        <li><strong>Programme and Departmental Reviews:</strong> Coordinate cyclical reviews, self-evaluation reports (SERs), improvement plans, and follow-up evaluations.</li>
+        <li><strong>Compliance Tracking:</strong> Ensure alignment with CHE standards, DHET requirements, and internal quality policies.</li>
+        <li><strong>Risk Identification and Mitigation:</strong> Flag quality risks early and guide units on corrective action strategies.</li>
+        <li><strong>Reporting and Feedback Processes:</strong> Produce institutional quality reports, review findings, dashboard insights, and performance summaries for Senate and Management.</li>
+        <li><strong>Capacity Development for Quality:</strong> Train staff on quality assurance processes, reviews, self-evaluation, and action planning.</li>
+        <li><strong>Support for Teaching, Learning, and Assessment Quality:</strong> Provide quality insights that strengthen curriculum delivery, assessment practices, and student learning experiences.</li>
+        <li><strong>Monitoring of Follow-Up Actions:</strong> Track implementation of recommendations from audits, site visits, external evaluations, and review committees.</li>
+    </ul>
+
+    <p style="text-align: justify;">
+        Through systematic monitoring and capacity development, the Quality Enhancement and Monitoring function ensures that all departments uphold WSU’s quality standards and continuously improve their performance.
+    </p>
+
+    <h2>Quality Review and Institutional Accountability</h2>
+    <p style="text-align: justify;">
+        This function strengthens institutional accountability by ensuring that quality review processes are executed thoroughly and consistently. It supports evidence-based decision-making and strengthens institutional governance.
+    </p>
+
+    <h4>Roles and Responsibilities:</h4>
+    <ul>
+        <li><strong>Review Management:</strong> Coordinate internal and external quality reviews, including preparing units for CHE evaluations.</li>
+        <li><strong>Standards and Criteria Alignment:</strong> Ensure that all reviews follow approved institutional and national standards.</li>
+        <li><strong>Institutional Evidence Management:</strong> Manage quality portfolios, evidence repositories, and compliance documentation.</li>
+        <li><strong>Stakeholder Engagement:</strong> Work with faculties, support units, review panels, and external stakeholders to conduct effective reviews.</li>
+        <li><strong>Quality Assurance Reporting:</strong> Produce comprehensive reports that inform institutional improvement decisions.</li>
+        <li><strong>Quality Improvement Planning:</strong> Support units in designing actionable and measurable improvement plans post-review.</li>
+    </ul>
+
+    <p style="text-align: justify;">
+        This function ensures that quality standards remain consistent across departments and that WSU continues to meet the expectations of internal and external quality authorities.
+    </p>
+
+    <h2>Performance Monitoring and Quality Data Insights</h2>
+    <p style="text-align: justify;">
+        This function provides real-time data on quality performance indicators and institutional compliance. It ensures that decision-makers have accurate insights to strengthen academic quality.
+    </p>
+
+    <h4>Roles and Responsibilities:</h4>
+    <ul>
+        <li><strong>Quality Dashboards:</strong> Develop dashboards that track review cycles, improvement plan implementation, compliance status, and quality indicators.</li>
+        <li><strong>Monitoring of Quality KPIs:</strong> Analyse performance against teaching, learning, research, and support KPIs.</li>
+        <li><strong>Risk Dashboarding:</strong> Identify emerging institutional quality risks and generate risk alerts.</li>
+        <li><strong>Evidence-Based Reporting:</strong> Provide accurate data to support Senate, EMC, and quality governance structures.</li>
+        <li><strong>Faculty and Departmental Support:</strong> Assist units in understanding their quality performance data.</li>
+    </ul>
+
+    <p style="text-align: justify;">
+        This function transforms institutional quality data into actionable insights, supporting a culture of accountability, compliance, and continuous improvement at WSU.
+    </p>
+
+</section>
+
+
+
+</body>
+
+</html>

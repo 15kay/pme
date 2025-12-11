@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    .Introduction {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 3rem 2rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.65;
+        font-size: 1.125rem;
+    }
+
+    /* Headings */
+    .Introduction h1,
+    h2 {
+        color: #0d3b66;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.02em;
+    }
+
+    .Introduction h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: 'Georgia', serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .Introduction h2 {
+        font-size: 1.8rem;
+        /* margin-top: 3.5rem; */
+        /* border-bottom: 3px solid #242426; */
+        /* padding-bottom: 0.4rem; */
+        font-family: 'Segoe UI Semibold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    /* Paragraphs */
+    .Introduction p {
+        color: #3b3b3b;
+        margin-bottom: 1.25rem;
+        font-weight: 400;
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    /* Lists */
+    .Introduction ul {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+        color: #3b3b3b;
+        list-style-type: disc;
+        text-align: justify;
+    }
+
+    .Introduction ul li {
+        margin-bottom: 0.85rem;
+        line-height: 1.5;
+    }
+
+    strong {
+        color: #0d3b66;
+        font-weight: 600;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .Introduction {
+            padding: 2rem 1rem;
+            font-size: 1rem;
+        }
+
+        .Introduction h1 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        .Introduction h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+    }
+</style>
+
+<body>
+ 
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="/AcaPlan/index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link active">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="academic_activity.html" class="dropdown-link">Academic Activity
+                                        Planning</a></li>
+
+                                <li><a href="programme_development.html" class="dropdown-link">Programme
+                                        Development & Accreditation</a></li>
+
+                                <li><a href="university_liaison.html" class="dropdown-link">University
+                                        Liaison</a></li>
+
+                                <li><a href="strategic_advisory.html" class="dropdown-link">Strategic
+                                        Advisory</a></li>
+
+                                <li><a href="coordination_leadership.html" class="dropdown-link">Coordination &
+                                        Leadership</a></li>
+                            </ul>
+                        </li>
+
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+
+    <section class="contact-hero">
+        <br>
+        <h1>About Us</h1>
+        <p>Welcome to Academic Planning</p>
+    </section>
+
+    <section class="Introduction">
+
+        <!-- Introduction -->
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                The Academic Planning Directorate at Walter Sisulu University plays a strategic and foundational role
+                in shaping the academic landscape of the institution. As WSU strives toward its vision of being an
+                impactful, technology-infused African university, Academic Planning ensures that academic offerings are
+                aligned, compliant, relevant, and capable of supporting institutional excellence.
+            </p>
+
+            <p>
+                In a rapidly evolving higher education environment, the need for effective academic planning, programme
+                development, accreditation, and academic service delivery has never been more essential. Academic
+                Planning
+                provides the framework, oversight, and strategic guidance necessary for WSU to adapt, grow, and maintain
+                academic integrity and quality.
+            </p>
+
+            <p>
+                <strong>For more information:</strong>
+                <a href="assets/reports/academic-planning-overview.pdf" target="_blank" rel="noopener noreferrer"
+                    class="download-link">
+                    Download the Academic Planning Overview (PDF)
+                </a>
+            </p>
+        </section>
+
+        <!-- Rationale -->
+        <section>
+            <h2>The Rationale for Academic Planning</h2>
+            <p>
+                Academic Planning plays a pivotal role in supporting WSU’s strategic direction and academic mission.
+                Its work ensures that academic programmes, planning processes, and institutional compliance efforts
+                are grounded in national policy frameworks and aligned with university priorities. The Directorate’s
+                significance lies in its ability to guide sustainable academic growth, quality assurance, and
+                institutional
+                alignment.
+            </p>
+
+            <ul>
+                <li><strong>Academic Programmes as Strategic Assets:</strong> Academic Planning ensures that programmes
+                    are designed, accredited, and monitored in accordance with national regulatory bodies such as DHET,
+                    SAQA, and CHE.</li>
+
+                <li><strong>Evidence-Based Academic Decision-Making:</strong> Through programme viability studies,
+                    registration monitoring, and compliance assessments, the Directorate provides insights that guide
+                    academic and institutional decision-making.</li>
+
+                <li><strong>Enhancing Student Success:</strong> By ensuring programmes meet educational compliance and
+                    notional hour standards, Academic Planning supports the delivery of quality learning experiences
+                    that
+                    contribute to student success.</li>
+
+                <li><strong>Optimizing Academic Resource Allocation:</strong> The Directorate advises on programme
+                    viability, alignment, and demand, ensuring that resources are allocated efficiently and sustainably.
+                </li>
+
+                <li><strong>Fostering Academic Excellence:</strong> Academic Planning contributes to curriculum quality,
+                    programme reviews, and academic integrity to ensure continuous improvement in teaching and learning.
+                </li>
+
+                <li><strong>Strategic Planning and Accountability:</strong> Academic Planning participates in shaping
+                    the
+                    institutional academic plan, the Programme Qualification Mix (PQM), and compliance with national
+                    regulations.</li>
+
+                <li><strong>Institutional Collaboration:</strong> Working closely with faculties, directorates, and
+                    external
+                    stakeholders, the Directorate promotes transparency, alignment, and shared academic purpose.</li>
+            </ul>
+
+            <p>
+                Academic Planning ensures that WSU’s academic enterprise remains responsive, compliant, innovative, and
+                strategically aligned with the needs of its students, communities, and the broader higher education
+                sector.
+            </p>
+        </section>
+
+        <!-- Vision -->
+        <section>
+            <h2>Vision</h2>
+            <p>
+                To guide and support the development of a strategic, compliant, and forward-thinking academic
+                environment
+                that enables Walter Sisulu University to deliver high-quality, relevant, and sustainable academic
+                programmes.
+            </p>
+        </section>
+
+        <!-- Mission -->
+        <section>
+            <h2>Mission</h2>
+            <p>
+                Our mission is to advance WSU’s academic objectives by ensuring effective planning, programme
+                development,
+                accreditation, and oversight of academic processes. We are committed to:
+            </p>
+
+            <ul>
+                <li><strong>Developing and Monitoring the Academic Plan:</strong> Facilitate the creation of the
+                    academic
+                    calendar and academic delivery model for the institution.</li>
+
+                <li><strong>Supporting Sustainable Programme Growth:</strong> Oversee the development, accreditation,
+                    and
+                    review of academic programmes aligned with institutional strategy and market demand.</li>
+
+                <li><strong>Ensuring Academic Compliance:</strong> Monitor educational compliance, notional hours,
+                    academic
+                    integrity, and adherence to national regulations.</li>
+
+                <li><strong>Enhancing Academic Efficiency:</strong> Provide guidance on registration quotas, admission
+                    patterns,
+                    and their impact on academic delivery.</li>
+
+                <li><strong>Institutional Advisory:</strong> Support university committees such as SIQAC with expert
+                    academic
+                    insights to strengthen quality and compliance.</li>
+
+                <li><strong>Leading Institutional Engagement:</strong> Represent WSU in national regulatory processes
+                    involving
+                    DHET, SAQA, CHE, and other key bodies.</li>
+
+                <li><strong>Strengthening Academic Collaboration:</strong> Facilitate transparent communication and
+                    integrated
+                    planning across faculties and directorates.</li>
+            </ul>
+
+            <p>
+                Through these commitments, Academic Planning helps sustain academic excellence, institutional
+                credibility, and
+                strategic growth at Walter Sisulu University.
+            </p>
+        </section>
+
+        <!-- Values -->
+        <section>
+            <h2>Values</h2>
+            <p>
+                The Academic Planning Directorate upholds the values outlined in WSU’s strategic plan—integrity,
+                excellence,
+                respect, and Ubuntu—and further commits to the following principles:
+            </p>
+
+            <ul>
+                <li><strong>Academic Integrity:</strong> Ensuring honesty and accuracy in all academic planning,
+                    reporting,
+                    and compliance activities.</li>
+
+                <li><strong>Quality and Rigor:</strong> Commitment to high academic standards in programme development,
+                    accreditation processes, and curriculum oversight.</li>
+
+                <li><strong>Professional Excellence:</strong> Offering responsive, informed, and proactive academic
+                    support
+                    to the university community.</li>
+
+                <li><strong>Collaborative Engagement:</strong> Working closely with faculties, committees, and external
+                    bodies to ensure alignment and cohesive academic planning.</li>
+
+                <li><strong>Transparency and Accountability:</strong> Promoting openness in decision-making, monitoring,
+                    and programme review processes.</li>
+
+                <li><strong>Continuous Improvement:</strong> Advancing a culture of ongoing evaluation, refinement, and
+                    academic innovation.</li>
+            </ul>
+
+            <p>
+                These values represent the core of Academic Planning’s commitment to supporting WSU’s academic mission
+                and
+                promoting a strong, future-focused academic environment.
+            </p>
+        </section>
+
+    </section>
+
+
+</body>
+
+</html>

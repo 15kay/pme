@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRP - WSU</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<style>
+    .main-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0d3b66;
+        margin-top: 2rem;
+    }
+
+    .main-content h3,
+    .main-content h4 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: #333;
+    }
+
+    .main-content p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        /* text-align: justify; */
+    }
+
+    .main-content ul {
+        margin-left: 1.25rem;
+        padding-left: 1rem;
+        list-style-type: disc;
+    }
+
+    .main-content li {
+        margin-bottom: 0.75rem;
+    }
+</style>
+
+<body>
+    <section>
+        <script src="../js/load-nav.js"></script>
+        <!-- nav.html -->
+        <header class="header">
+            <!-- First Row - Logo and Search -->
+            <div class="header-top">
+                <div class="header-container">
+                    <div class="logo-container centered-logo">
+                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
+                    </div>
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
+                                aria-label="Search" />
+                            <button type="submit" class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- NAVIGATION ROW 1 -->
+            <div class="header-bottom1" style="background:#000;">
+                <ul class="nav-lins">
+                    <li><a href="/index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
+                </ul>
+            </div>
+
+            <!-- Second Row - Centered Navigation -->
+            <div class="header-bottom">
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                <!-- Sidebar Navigation -->
+                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
+                    <!-- Sidebar Search for Mobile -->
+                    <div class="sidebar-search-container">
+                        <form class="sidebar-search-form" id="sidebarSearchForm">
+                            <input type="text" class="sidebar-search-input" placeholder="Search..."
+                                aria-label="Search" />
+
+                        </form>
+                    </div>
+
+
+
+                    <ul class="nav-links">
+                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Core Functions
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
+                                        Developement</a></li>
+                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a>
+                                </li>
+                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html" class="nav-link">News</a></li>
+                        <li><a href="team.htm" class="nav-link">Meet Our Team</a></li>
+                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <br><br>
+    <section class="contact-hero">
+        <br>
+        <h1>QEM</h1>
+        <p>Welcome to Quality Assurance</p>
+        <!-- <nav class="section-nav">
+        <ul>
+            <li><a href="../IR/dashboard.html" class="section-link">View Dashboards</a></li>
+            <li><a href="../IR/reports.html" class="section-link">View Reports</a></li>
+        </ul>
+    </nav> -->
+    </section>
+
+    <section class="main-content" style="padding: 3rem 1.5rem; max-width: 1200px; margin: auto;">
+
+        <h2>Quality Assurance</h2>
+
+        <h3>Overview of Quality Assurance at WSU</h3>
+        <p style="text-align: justify;">
+            The Quality Assurance (QA) function at Walter Sisulu University ensures that all academic and administrative
+            activities meet institutional, national, and regulatory quality standards. Rooted in the Institutional
+            Quality
+            Management System Framework (IQMSF), the QA function provides structured mechanisms for evaluating
+            performance,
+            ensuring compliance, and driving continuous improvement across the university. It promotes accountability,
+            strengthens academic integrity, and ensures that all programmes, services, and operations remain fit for
+            purpose and aligned with the university's strategic direction.
+        </p>
+
+        <h4>Roles and Responsibilities:</h4>
+        <ul>
+            <li><strong>Implementation of Quality Standards:</strong> Ensure institutional alignment with CHE standards,
+                HEQSF requirements, professional body standards, and internal quality policies.</li>
+
+            <li><strong>Quality Planning and Framework Management:</strong> Oversee the implementation and ongoing
+                review
+                of the IQMSF to ensure relevance, integration, and alignment with institutional goals.</li>
+
+            <li><strong>Internal Quality Assurance Processes:</strong> Lead institutional QA processes across faculties,
+                departments, and support units, including evaluations, audits, monitoring, and compliance checks.</li>
+
+            <li><strong>Quality Review Coordination:</strong> Facilitate academic and administrative reviews, ensuring
+                systematic processes for self-evaluation, evidence collection, peer review, and improvement planning.
+            </li>
+
+            <li><strong>Quality Assurance Systems Alignment:</strong> Support alignment between teaching and learning,
+                research, community engagement, and administrative quality frameworks.</li>
+
+            <li><strong>Policy Development and Assurance:</strong> Develop, review, and implement policies, guidelines,
+                templates, and criteria that support consistent QA processes across the institution.</li>
+
+            <li><strong>Assurance of Teaching and Learning Quality:</strong> Support curriculum quality assurance
+                processes,
+                module and programme assessments, and the enhancement of teaching practices.</li>
+
+            <li><strong>Quality Evidence and Documentation:</strong> Manage evidence repositories that support
+                compliance,
+                review processes, and institutional reporting to regulatory bodies.</li>
+
+            <li><strong>Risk-Focused Quality Assurance:</strong> Identify quality-related risks and support faculties
+                and
+                departments in implementing mitigating actions.</li>
+
+            <li><strong>Support for External Evaluations:</strong> Prepare the institution for CHE evaluations,
+                accreditation
+                reviews, and professional body assessments.</li>
+        </ul>
+
+        <p style="text-align: justify;">
+            The Quality Assurance function ensures that the university achieves consistent excellence across all domains
+            by
+            providing structured systems, rigorous evaluation processes, and institutional leadership in quality.
+        </p>
+
+
+        <h2>Quality Assurance Processes and Systems</h2>
+        <p style="text-align: justify;">
+            Quality Assurance at WSU is grounded in the Plan–Do–Check–Act (PDCA) cycle, promoting reflection,
+            accountability, and continuous improvement. QA processes evaluate performance and ensure that the university
+            maintains a clear quality track record aligned with national expectations.
+        </p>
+
+        <h4>Core QA Processes:</h4>
+        <ul>
+            <li><strong>Self-Evaluation Reports (SERs):</strong> Units conduct evidence-based evaluations of their
+                performance, identifying strengths, gaps, and areas for improvement.</li>
+
+            <li><strong>Peer Review Mechanisms:</strong> Internal and external reviewers provide objective assessments
+                of
+                institutional and programme quality.</li>
+
+            <li><strong>Quality Improvement Plans (QIPs):</strong> Units develop actionable strategies to address review
+                findings, monitored through continuous reporting.</li>
+
+            <li><strong>Ongoing Monitoring:</strong> Track the implementation of QIPs, compliance with standards, and
+                overall quality performance.</li>
+
+            <li><strong>Review Cycles:</strong> Cyclical academic and support reviews ensure systematic evaluation and
+                improvement over time.</li>
+
+            <li><strong>Institutional Quality Reporting:</strong> Provide evidence-based reports to Senate, SQAC, EMC,
+                and
+                other governance structures.</li>
+        </ul>
+
+        <p style="text-align: justify;">
+            These processes ensure that WSU maintains high levels of quality, transparency, and performance
+            accountability
+            in all academic and operational areas.
+        </p>
+
+
+        <h2>Quality Assurance Governance</h2>
+        <p style="text-align: justify;">
+            Effective governance is essential for institutional quality. The QA function collaborates with leadership,
+            faculties, departments, and committees to ensure that quality standards are upheld and that the university
+            remains aligned with national and global higher education expectations.
+        </p>
+
+        <h4>Key Governance Roles:</h4>
+        <ul>
+            <li><strong>Senate and SQAC:</strong> Provide strategic oversight, approve QA processes, and ensure
+                compliance
+                with academic quality standards.</li>
+
+            <li><strong>Executive Management Committee (EMC):</strong> Review quality reports and support institutional
+                decision-making informed by QA evidence.</li>
+
+            <li><strong>Faculties and Departments:</strong> Implement QA systems, conduct SERs, develop QIPs, and
+                maintain
+                performance documentation.</li>
+
+            <li><strong>Quality Practitioners and Quality Management Directorate:</strong> Coordinate QA activities,
+                provide
+                expertise, and support the professionalisation of quality practices.</li>
+
+            <li><strong>External Bodies:</strong> Engage with CHE, SAQA, DHET, and professional councils to ensure
+                accountability and accreditation success.</li>
+        </ul>
+
+        <p style="text-align: justify;">
+            Through shared governance and collaboration, the Quality Assurance function ensures that the university
+            operates
+            within a strong quality ecosystem supported by clear roles, policies, and accountability mechanisms.
+        </p>
+
+    </section>
+
+</body>
+
+</html>
