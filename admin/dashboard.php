@@ -41,7 +41,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #1e293b; /* dark slate */
+    background-color: #561415; /* dark slate */
     color: #fff;
     height: 100vh;
     position: fixed;
@@ -115,7 +115,7 @@ body {
     font-size: 24px;
 }
 #darkModeToggle {
-    background-color: #00bfa6;
+    background-color: #561415;
     color: white;
     border: none;
     padding: 10px 16px;
@@ -204,7 +204,7 @@ body {
 
 /* Links & Buttons */
 .action-links a {
-    color: #007bff;
+    color: #561415;
     text-decoration: none;
     font-weight: 600;
 }

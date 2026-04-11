@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
         /* Sidebar */
         .sidebar {
             width: 250px;
-            background-color: #1e293b; /* dark slate */
+            background-color: #561415; /* dark slate */
             color: #fff;
             height: 100vh;
             position: fixed;

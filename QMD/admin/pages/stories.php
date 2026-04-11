@@ -31,7 +31,7 @@ $stories = $conn->query("SELECT * FROM stories ORDER BY created_at DESC");
         /* Sidebar */
         .sidebar {
             width: 250px;
-            background-color: #1e293b;
+            background-color: #561415;
             color: #fff;
             height: 100vh;
             position: fixed;
@@ -118,7 +118,7 @@ $stories = $conn->query("SELECT * FROM stories ORDER BY created_at DESC");
         }
 
         th {
-            background-color: #f4f4f4;
+            background-color: #E4E9EA;
             color: #333;
         }
 

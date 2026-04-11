@@ -14,10 +14,10 @@
     :root {
         --primary: #831a1c;
         --primary-dark: #1d4ed8;
-        --text: #1e293b;
+        --text: #561415;
         --text-light: #64748b;
         --bg: #ffffff;
-        --bg-secondary: #f8fafc;
+        --bg-secondary: #E4E9EA;
         --border: #e2e8f0;
         --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

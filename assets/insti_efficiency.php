@@ -13,7 +13,7 @@
 <style>
     .Introduction {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f6f8;
+        background-color: #E4E9EA;
         color: #1a1a1a;
         margin: 0;
         padding: 3rem 2rem;

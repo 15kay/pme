@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: #f4f6f9;
+            background: #E4E9EA;
             margin: 0;
             padding: 40px;
             display: flex;
@@ -50,7 +50,7 @@
         }
 
         button {
-            background: #007bff;
+            background: #561415;
             color: #fff;
             padding: 12px 20px;
             border: none;
@@ -62,7 +62,7 @@
         }
 
         button:hover {
-            background: #0056b3;
+            background: #3d0d0e;
         }
 
         .note {
