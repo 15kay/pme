@@ -26,7 +26,7 @@
 
     .Introduction h1,
     h2 {
-        color: #0d3b66;
+        color: #561415;
         font-weight: 700;
         margin-bottom: 0.6rem;
         letter-spacing: 0.02em;
@@ -65,7 +65,7 @@
     }
 
     strong {
-        color: #0d3b66;
+        color: #561415;
         font-weight: 600;
     }
 

@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
-  --primary-color: #1a347e;
-  --secondary-color: #3b82f6;
+  --primary-color: #561415;
+  --secondary-color: #831a1c;
   --dark-color: #0f172a;
   --light-color: #f8fafc;
   --text-color: #334155;
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: #fff;
@@ -30,7 +30,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -81,7 +81,7 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #0f2452;
+  background-color: #3d0d0e;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -117,8 +117,8 @@ img {
 }
 
 :root {
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
+  --primary: #831a1c;
+  --primary-dark: #831a1c;
   --accent: #feb847;
   --bg: #ffffff;
   --bg-secondary: #f3f4f6;
@@ -166,7 +166,7 @@ img {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(135deg, #4e54c8, #feb847);
+  background: linear-gradient(135deg, #561415, #feb847);
 }
 
 /* CONTAINER */
@@ -561,7 +561,7 @@ body {
 
 /* Contact Page Specific Styles */
 .contact-hero {
-  background: linear-gradient(135deg, #011d42 0%, #004aad 100%);
+  background: linear-gradient(135deg, #3d0d0e 0%, #561415 100%);
   color: white;
   padding: 5rem 1rem;
   text-align: center;
@@ -747,7 +747,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #feb847);
+  background: linear-gradient(90deg, #831a1c, #feb847);
 }
 
 .units-grid {
@@ -805,7 +805,7 @@ body {
 
 /* Base Styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #f4f6f8;
   color: #333;
 }
@@ -884,13 +884,13 @@ body {
 .read-more {
   font-size: 14px;
   text-decoration: none;
-  color: #4e54c8;
+  color: #561415;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .read-more:hover {
-  color: #373aad;
+  color: #561415;
 }
 
 /* View More Button */
@@ -900,7 +900,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  background: linear-gradient(135deg, #561415, #a83234);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -916,7 +916,7 @@ body {
   flex: 1;
   background-color: #f8f9fc;
   padding: 20px 24px;
-  border-left: 4px solid #4e54c8;
+  border-left: 4px solid #561415;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   height: fit-content;
@@ -956,7 +956,7 @@ body {
     width: 100%;
     margin-top: 30px;
     border-left: none;
-    border-top: 4px solid #4e54c8;
+    border-top: 4px solid #561415;
   }
 
   .news-cards {
@@ -1014,7 +1014,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #feb847);
+  background: linear-gradient(90deg, #831a1c, #feb847);
 }
 
 .newsletter-content {
@@ -1105,7 +1105,7 @@ body {
 }
 
 .footer-logo span {
-  color: #7a91db;
+  color: #c47475;
 }
 
 .footer-description {

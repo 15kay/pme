@@ -12,7 +12,7 @@
 </head>
 <style>
     :root {
-        --primary: #2563eb;
+        --primary: #831a1c;
         --primary-dark: #1d4ed8;
         --text: #1e293b;
         --text-light: #64748b;

@@ -15,7 +15,7 @@
     .main-content h2 {
         font-size: 2rem;
         font-weight: 700;
-        color: #0d3b66;
+        color: #561415;
         margin-top: 2rem;
     }
 
