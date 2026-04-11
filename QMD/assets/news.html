@@ -1,390 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IRP - WSU</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      background-color: #f5f5f5;
-      color: #333;
-      padding: 2rem 0;
-      margin: 0;
-    }
-
-    .responsive-wrapper {
-      width: 90%;
-      max-width: 1800px;
-      margin: auto;
-      background: white;
-      padding: 8rem;
-      /* generous padding */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-
-    /* Medium screens (tablets) */
-    @media (max-width: 1024px) {
-      .responsive-wrapper {
-        width: 95%;
-        padding: 8rem;
-      }
-    }
-
-    /* Small screens (phones) */
-    @media (max-width: 600px) {
-      .responsive-wrapper {
-        width: 98%;
-        padding: 6rem 1.5rem;
-        box-shadow: none;
-        /* optional: remove shadow on tiny screens */
-        border-radius: 0;
-      }
-    }
-
-
-
-    .wra-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #222;
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .wra-header h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      font-family: 'Fraunces', serif;
-    }
-
-    .wra-header a {
-      margin-left: 1.5rem;
-      font-weight: 600;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .page-title {
-      text-align: center;
-      font-family: 'Fraunces', serif;
-      font-size: 2.5rem;
-      margin: 2rem 0;
-      padding-bottom: 1rem;
-      border-bottom: 3px double #000;
-    }
-
-    .section-heading {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-
-    .newspaper-columns {
-      column-count: 3;
-      column-gap: 2rem;
-      padding: 1rem 0;
-    }
-
-    /* Articles */
-    .article {
-      break-inside: avoid;
-      margin-bottom: 2rem;
-    }
-
-    .article-title {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #111;
-      margin-bottom: 0.5rem;
-    }
-
-    .article-title a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .article-excerpt p {
-      font-size: 1rem;
-      margin: 0 0 0.75rem;
-    }
-
-    .article img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      margin-bottom: 0.75rem;
-      border-radius: 4px;
-      display: block;
-    }
-
-    @media (max-width: 1024px) {
-      .newspaper-columns {
-        column-count: 2;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .newspaper-columns {
-        column-count: 1;
-      }
-    }
-
-    @media (max-width: 350px) {
-      .page-btn {
-        padding: 0.3rem 0.6rem;
-        min-width: 40px;
-        font-size: 0.875rem;
-      }
-    }
-
-    .pagination {
-      margin-top: 1rem;
-      text-align: center;
-    }
-
-    .page-btn {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 0.5rem 1.25rem;
-      background-color: #561415;
-      color: #fff;
-      border-radius: 15px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      align-self: flex-start;
-      border: none;
-      cursor: pointer;
-    }
-
-    .page-btn:hover {
-      background-color: #ddd;
-      color: #000;
-    }
-  </style>
+  <title>News — QMD | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
- <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
-
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
-
-                        </form>
-                    </div>
-
-
-
-                    <ul class="nav-links">
-                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
-                                        Developement</a></li>
-                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
-                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link active">News</a></li>
-                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-<br><br>
-  <div class="responsive-wrapper">
-
-    <div class="page-title">QMD News & Reports</div>
-
-    <div class="section-heading">Top Stories</div>
-    <div class="newspaper-columns">
-
-  <!-- Article 1 -->
-  <article class="article">
-    <img src="img/mkhoza.jpeg" alt="QMD Review" />
-    <h3 class="article-title"><a href="#">Strengthening Quality Standards Across WSU</a></h3>
-    <div class="article-excerpt">
-      <p>The Directorate advances institution-wide quality by refining review processes, enhancing compliance, and supporting academic excellence.</p>
+  <section class="page-hero" style="background-image:url('../assets/img/news1.jpeg');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">QMD</span>
+      <h1>News & Reports</h1>
+      <p>Latest updates, stories, and featured reports from the Quality Management Directorate.</p>
     </div>
-  </article>
+  </section>
 
-  <!-- Article 2 -->
-  <article class="article">
-    <img src="img/toni.jpeg" alt="QMD Training" />
-    <h3 class="article-title"><a href="#">Capacity Development Workshop Empowers Quality Practitioners</a></h3>
-    <div class="article-excerpt">
-      <p>QMD hosted a training session focused on SER development, PDCA application, and quality improvement implementation.</p>
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span><a href="../index-qmd.html">QMD</a>
+      <span class="sep">/</span><span class="current">News</span>
     </div>
-  </article>
+  </div>
 
-  <!-- Article 3 -->
-  <article class="article">
-    <img src="img/article3.jpeg" alt="QMD Collaboration" />
-    <h3 class="article-title"><a href="#">New Collaboration Model Enhances Quality Review Efficiency</a></h3>
-    <div class="article-excerpt">
-      <p>A revised collaboration framework strengthens cooperation between faculties, support units, and external reviewers.</p>
+  <div class="news-page-wrap">
+    <div class="news-page-inner">
+
+      <span class="news-section-label">Top Stories</span>
+      <div class="news-page-grid">
+        <div class="news-article">
+          <img src="../assets/img/mkhoza.jpeg" alt="QMD Review" />
+          <div class="news-article-body">
+            <span class="n-tag">Quality</span>
+            <h3><a href="#">Strengthening Quality Standards Across WSU</a></h3>
+            <p>The Directorate advances institution-wide quality by refining review processes, enhancing compliance, and supporting academic excellence.</p>
+          </div>
+        </div>
+        <div class="news-article">
+          <img src="../assets/img/toni.jpeg" alt="QMD Training" />
+          <div class="news-article-body">
+            <span class="n-tag">Capacity</span>
+            <h3><a href="#">Capacity Development Workshop Empowers Quality Practitioners</a></h3>
+            <p>QMD hosted a training session focused on SER development, PDCA application, and quality improvement implementation.</p>
+          </div>
+        </div>
+        <div class="news-article">
+          <img src="../assets/img/article3.jpeg" alt="Collaboration" />
+          <div class="news-article-body">
+            <span class="n-tag">Collaboration</span>
+            <h3><a href="#">New Collaboration Model Enhances Quality Review Efficiency</a></h3>
+            <p>A revised collaboration framework strengthens cooperation between faculties, support units, and external reviewers.</p>
+          </div>
+        </div>
+      </div>
+
+      <span class="news-section-label">Featured Reports</span>
+      <div class="news-page-grid">
+        <div class="news-article">
+          <img src="../assets/img/news3.jpeg" alt="QIP Report" />
+          <div class="news-article-body">
+            <span class="n-tag">Report</span>
+            <h3><a href="#">2025 Quality Improvement Plan Progress Report</a></h3>
+            <p>The latest QIP report highlights significant progress in programme reviews, SER submissions, and implementation tracking.</p>
+          </div>
+        </div>
+        <div class="news-article">
+          <img src="../assets/img/news1.jpeg" alt="QA Monitoring" />
+          <div class="news-article-body">
+            <span class="n-tag">Monitoring</span>
+            <h3><a href="#">Internal Review Cycle Monitoring Report</a></h3>
+            <p>QMD's monitoring cycle evaluates compliance, identifies enhancement areas, and strengthens departmental readiness for external reviews.</p>
+          </div>
+        </div>
+        <div class="news-article">
+          <img src="../assets/img/news2.jpeg" alt="PDCA" />
+          <div class="news-article-body">
+            <span class="n-tag">Enhancement</span>
+            <h3><a href="#">PDCA Quality Enhancement Implementation Brief</a></h3>
+            <p>A detailed briefing on how departments are applying the Plan–Do–Check–Act model to improve teaching, learning, and support services.</p>
+          </div>
+        </div>
+      </div>
+
+      <span class="news-section-label">News Briefs</span>
+      <div class="news-page-grid">
+        <div class="news-article news-brief">
+          <div class="news-article-body">
+            <span class="n-tag">Governance</span>
+            <h3><a href="#">Senate Quality Assurance Committee Convenes Strategic Review</a></h3>
+            <p>The SQAC met to evaluate institutional quality performance and strengthen oversight of academic and support reviews.</p>
+          </div>
+        </div>
+        <div class="news-article news-brief">
+          <div class="news-article-body">
+            <span class="n-tag">Dashboard</span>
+            <h3><a href="#">QMD Launches Institutional Quality Dashboard</a></h3>
+            <p>The new dashboard tracks review cycles, QIP progress, compliance levels, and quality performance indicators across faculties.</p>
+          </div>
+        </div>
+        <div class="news-article news-brief">
+          <div class="news-article-body">
+            <span class="n-tag">Review</span>
+            <h3><a href="#">External Review Preparation Underway at All Faculties</a></h3>
+            <p>Faculties are finalising SERs and evidence portfolios in preparation for upcoming internal and external quality evaluations.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </article>
+  </div>
 
-</div>
-
-<div class="pagination">
-  <button class="page-btn">1</button>
-  <button class="page-btn">2</button>
-  <button class="page-btn">3</button>
-  <button class="page-btn">Next</button>
-</div>
-
-
-<!-- FEATURED REPORTS SECTION -->
-<div class="section-heading">Featured Reports</div>
-<div class="newspaper-columns">
-
-  <!-- Report 1 -->
-  <article class="article">
-    <img src="img/news3.jpeg" alt="QIP Report" />
-    <h3 class="article-title"><a href="#">2025 Quality Improvement Plan Progress Report</a></h3>
-    <div class="article-excerpt">
-      <p>The latest QIP report highlights significant progress in programme reviews, SER submissions, and implementation tracking.</p>
-    </div>
-  </article>
-
-  <!-- Report 2 -->
-  <article class="article">
-    <img src="img/news1.jpeg" alt="QA Monitoring" />
-    <h3 class="article-title"><a href="#">Internal Review Cycle Monitoring Report</a></h3>
-    <div class="article-excerpt">
-      <p>QMD’s monitoring cycle evaluates compliance, identifies enhancement areas, and strengthens departmental readiness for external reviews.</p>
-    </div>
-  </article>
-
-  <!-- Report 3 -->
-  <article class="article">
-    <img src="img/news2.jpeg" alt="PDCA" />
-    <h3 class="article-title"><a href="#">PDCA Quality Enhancement Implementation Brief</a></h3>
-    <div class="article-excerpt">
-      <p>A detailed briefing on how departments are applying the Plan–Do–Check–Act model to improve teaching, learning, and support services.</p>
-    </div>
-  </article>
-
-</div>
-
-<div class="pagination">
-  <button class="page-btn">1</button>
-  <button class="page-btn">2</button>
-  <button class="page-btn">3</button>
-  <button class="page-btn">Next</button>
-</div>
-
-
-<!-- NEWS BRIEFS -->
-<div class="section-heading">News Briefs</div>
-<div class="newspaper-columns">
-
-  <!-- Brief 1 -->
-  <article class="article">
-    <h3 class="article-title"><a href="#">Senate Quality Assurance Committee Convenes Strategic Review</a></h3>
-    <div class="article-excerpt">
-      <p>The SQAC met to evaluate institutional quality performance and strengthen oversight of academic and support reviews.</p>
-    </div>
-  </article>
-
-  <!-- Brief 2 -->
-  <article class="article">
-    <h3 class="article-title"><a href="#">QMD Launches Institutional Quality Dashboard</a></h3>
-    <div class="article-excerpt">
-      <p>The new dashboard tracks review cycles, QIP progress, compliance levels, and quality performance indicators across faculties.</p>
-    </div>
-  </article>
-
-  <!-- Brief 3 -->
-  <article class="article">
-    <h3 class="article-title"><a href="#">External Review Preparation Underway at All Faculties</a></h3>
-    <div class="article-excerpt">
-      <p>Faculties are finalising SERs and evidence portfolios in preparation for upcoming internal and external quality evaluations.</p>
-    </div>
-  </article>
-
-</div>
-
-<div class="pagination">
-  <button class="page-btn">1</button>
-  <button class="page-btn">2</button>
-  <button class="page-btn">3</button>
-  <button class="page-btn">Next</button>
-</div>
-
-  <script src="js/load-nav.js"></script>
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

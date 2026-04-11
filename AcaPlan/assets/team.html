@@ -1,325 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - WSU</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — Academic Planning | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<style>
-    .team-hero {
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    }
-    
-    .team-hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-    
-    .team-hero p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .team-section {
-        padding: 4rem 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .section-title {
-        text-align: center;
-        color: #561415;
-        margin-bottom: 3rem;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-    
-    .team-card {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: all 0.3s ease;
-        border-top: 4px solid #561415;
-    }
-    
-    .team-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card-header {
-        background: linear-gradient(135deg, #E4E9EA 0%, #e2e8f0 100%);
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .team-photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid white;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin: 0 auto 1rem;
-    }
-    
-    .card-content {
-        padding: 1.5rem 2rem 2rem;
-        text-align: center;
-    }
-    
-    .member-name {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #561415;
-        margin-bottom: 0.5rem;
-    }
-    
-    .member-title {
-        color: #64748b;
-        font-weight: 500;
-        margin-bottom: 1rem;
-        font-size: 1rem;
-    }
-    
-    .member-bio {
-        color: #475569;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        font-size: 0.95rem;
-    }
-    
-    .contact-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-        background: #E4E9EA;
-        border-radius: 8px;
-        margin-top: 1rem;
-    }
-    
-    .contact-info i {
-        color: #561415;
-    }
-    
-    .contact-info a {
-        color: #561415;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-    }
-    
-    .contact-info a:hover {
-        color: #831a1c;
-    }
-    
-    .director-card {
-        grid-column: 1 / -1;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    .coming-soon {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: #E4E9EA;
-        border-radius: 12px;
-        border: 2px dashed #cbd5e1;
-    }
-    
-    .coming-soon h3 {
-        color: #64748b;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .coming-soon p {
-        color: #94a3b8;
-        font-size: 1rem;
-    }
-    
-    @media (max-width: 768px) {
-        .team-hero h1 {
-            font-size: 2rem;
-        }
-        
-        .team-section {
-            padding: 2rem 1rem;
-        }
-        
-        .team-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .director-card {
-            grid-column: 1;
-        }
-    }
-</style>
-
 <body>
+  <div id="pme-header"></div>
 
-    <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <section class="page-hero" style="background-image:url('../assets/img/kwahene.png');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">Academic Planning</span>
+      <h1>Meet Our Team</h1>
+      <p>Strategic academic leadership ensuring programme quality, compliance, and institutional academic excellence.</p>
+    </div>
+  </section>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span><a href="../index.html">Academic Planning</a>
+      <span class="sep">/</span><span class="current">Our Team</span>
+    </div>
+  </div>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
-
-                        </form>
-                    </div>
-
-
-
-                    <ul class="nav-links">
-                        <li><a href="../index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="academic_activity.html" class="dropdown-link">Academic Activity
-                                        Planning</a></li>
-
-                                <li><a href="programme_development.html" class="dropdown-link">Programme
-                                        Development & Accreditation</a></li>
-
-                                <li><a href="university_liaison.html" class="dropdown-link">University
-                                        Liaison</a></li>
-
-                                <li><a href="strategic_advisory.html" class="dropdown-link">Strategic
-                                        Advisory</a></li>
-
-                                <li><a href="coordination_leadership.html" class="dropdown-link">Coordination &
-                                        Leadership</a></li>
-                            </ul>
-                        </li>
-
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link active">Meet Our Team</a></li>
-                        <li><a href="contact.html"  class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br>
-    <!-- Hero Section -->
-    <section class="team-hero">
-        <h1>Meet Our Academic Planning Team</h1>
-        <p>Strategic academic leadership ensuring programme quality, compliance, and institutional academic excellence</p>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <!-- Director -->
-        <h2 class="section-title">Leadership</h2>
-        <div class="team-grid">
-            <div class="team-card director-card">
-                <div class="card-header">
-                    <img src="img/mrkw.png" alt="Francis Kwahenee" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Francis Kwahenee</h3>
-                    <p class="member-title">Director: Academic Planning</p>
-                    <p class="member-bio">Provides strategic leadership, coordination, and oversight for all academic planning activities at the university. Ensures that academic programmes, enrolment planning, curriculum structures, and institutional academic strategy are fully aligned with national policy, university priorities, and accreditation requirements.</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:fkwahene@wsu.ac.za">fkwahene@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
+  <section class="team-section">
+    <span class="eyebrow" style="text-align:center;display:block;">Leadership</span>
+    <h2 class="section-title">Director</h2>
+    <div class="team-grid">
+      <div class="team-card director-card">
+        <div class="team-card-header">
+          <img src="../assets/img/mrkw.png" alt="Francis Kwahenee" class="team-photo" />
         </div>
-
-        <!-- Team Members -->
-        <h2 class="section-title">Academic Planning Team</h2>
-        <div class="coming-soon">
-            <h3><i class="fas fa-users"></i> Team Expansion in Progress</h3>
-            <p>We are currently building our academic planning team. More team members will be introduced soon as we strengthen our capacity to serve the university's academic planning needs.</p>
+        <div class="team-card-body">
+          <p class="member-name">Francis Kwahenee</p>
+          <p class="member-title">Director: Academic Planning</p>
+          <p class="member-bio">Provides strategic leadership, coordination, and oversight for all academic planning activities at the university. Ensures that academic programmes, enrolment planning, curriculum structures, and institutional academic strategy are fully aligned with national policy, university priorities, and accreditation requirements.</p>
+          <a href="mailto:fkwahene@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> fkwahene@wsu.ac.za</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <script>
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+    <span class="eyebrow" style="text-align:center;display:block;margin-top:1rem;">Academic Planning Team</span>
+    <h2 class="section-title">Our Team</h2>
+    <div class="coming-soon-box">
+      <div class="cs-icon"><i class="fas fa-users"></i></div>
+      <h3>Team Expansion in Progress</h3>
+      <p>We are currently building our academic planning team. More team members will be introduced soon as we strengthen our capacity to serve the university's academic planning needs.</p>
+    </div>
+  </section>
+
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

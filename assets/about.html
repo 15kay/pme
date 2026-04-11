@@ -1,431 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About PME - Planning, Monitoring & Evaluation | Walter Sisulu University</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PME | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
-<style>
-    .Introduction {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #E4E9EA;
-        color: #1a1a1a;
-        margin: 0;
-        padding: 4rem 2rem;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.7;
-        font-size: 1.125rem;
-    }
-
-    .Introduction h1,
-    .Introduction h2 {
-        color: #561415;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        letter-spacing: 0.02em;
-    }
-
-    .Introduction h1 {
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        font-family: 'Georgia', serif;
-    }
-
-    .Introduction h2 {
-        font-size: 2rem;
-        margin-top: 3rem;
-        border-bottom: 3px solid #561415;
-        padding-bottom: 0.5rem;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    .Introduction p {
-        color: #374151;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
-        text-align: justify;
-    }
-
-    .Introduction ul {
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-        color: #374151;
-        list-style-type: none;
-    }
-
-    .Introduction ul li {
-        margin-bottom: 1rem;
-        line-height: 1.6;
-        position: relative;
-        padding-left: 1.5rem;
-    }
-
-    .Introduction ul li:before {
-        content: "▶";
-        position: absolute;
-        left: 0;
-        color: #561415;
-        font-size: 0.8rem;
-    }
-
-    strong {
-        color: #561415;
-        font-weight: 700;
-    }
-
-    .highlight-box {
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 2rem;
-        border-radius: 12px;
-        margin: 2rem 0;
-        text-align: center;
-    }
-
-    .highlight-box h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    .highlight-box p {
-        font-size: 1.1rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    .values-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
-    }
-
-    .value-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-left: 4px solid #561415;
-    }
-
-    .value-card h4 {
-        color: #561415;
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
-
-    .value-card p {
-        margin: 0;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .download-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: #561415;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s ease;
-        margin-top: 1rem;
-    }
-
-    .download-link:hover {
-        background: #831a1c;
-        color: white;
-    }
-
-    .stats-section {
-        background: #561415;
-        color: white;
-        padding: 3rem 2rem;
-        border-radius: 12px;
-        margin: 3rem 0;
-        text-align: center;
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .stat-item {
-        text-align: center;
-    }
-
-    .stat-item h3 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
-        color: #60a5fa;
-    }
-
-    .stat-item p {
-        font-size: 1.1rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        .Introduction {
-            padding: 2rem 1rem;
-            font-size: 1rem;
-        }
-
-        .Introduction h1 {
-            font-size: 2.2rem;
-        }
-
-        .Introduction h2 {
-            font-size: 1.6rem;
-        }
-
-        .values-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .stats-grid {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2rem;
-        }
-    }
-</style>
-
 <body>
-    <section>
-        <script src="../js/load-nav.js"></script>
-        <header class="header">
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
+  <div id="pme-header"></div>
 
-            <div class="header-bottom">
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/hero.png');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">PME Directorate</span>
+      <h1>About PME</h1>
+      <p>Planning, Monitoring & Evaluation — driving institutional excellence at Walter Sisulu University.</p>
+    </div>
+  </section>
 
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
-                        </form>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="../index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link active">About Us</a></li>
-                        <li><a href="../IRP/index.html" class="nav-link">Institutional Research Planning</a></li>
-                        <li><a href="../QMD/index-qmd.html" class="nav-link">Quality Management Directorate</a></li>
-                        <li><a href="../AcaPlan/index.html" class="nav-link">Academic Planning</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span>
+      <span class="current">About Us</span>
+    </div>
+  </div>
 
-    <section class="contact-hero">
-        <br>
-        <h1>About PME Directorate</h1>
-        <p>Planning, Monitoring & Evaluation at Walter Sisulu University</p>
-    </section>
+  <div class="content-section">
+    <div class="content-card">
+      <h2>Our Purpose</h2>
+      <p>The Planning, Monitoring and Evaluation (PME) Directorate serves as the strategic coordination hub for institutional oversight, performance assurance, and evidence-based decision-making across Walter Sisulu University. We ensure that all university processes, plans, and reports align with organizational goals and national higher education mandates.</p>
+      <div style="background:linear-gradient(135deg,#561415 0%,#831a1c 100%);color:#fff;padding:2rem;border-radius:12px;margin:1.5rem 0;text-align:center;">
+        <h3 style="color:#fff;font-size:1.4rem;margin-bottom:0.75rem;">Driving Excellence Through Data</h3>
+        <p style="color:rgba(255,255,255,0.9);margin:0;">We transform institutional data into actionable insights that guide strategic decisions, enhance performance, and support sustainable growth across all university operations.</p>
+      </div>
+      <p>As the custodian of institutional performance data, PME oversees the development, verification, and governance of all official university content intended for public dissemination. This includes strategic documents, performance reports, monitoring outcomes, and compliance-based submissions.</p>
+    </div>
 
-    <section class="Introduction">
-        <section>
-            <h2>Our Purpose</h2>
-            <p>
-                The Planning, Monitoring and Evaluation (PME) Directorate serves as the strategic coordination hub for institutional oversight, performance assurance, and evidence-based decision-making across Walter Sisulu University. We ensure that all university processes, plans, and reports align with organizational goals and national higher education mandates.
-            </p>
-            
-            <div class="highlight-box">
-                <h3>Driving Excellence Through Data</h3>
-                <p style="color: #E4E9EA;">We transform institutional data into actionable insights that guide strategic decisions, enhance performance, and support sustainable growth across all university operations.</p>
-            </div>
+    <div class="content-card">
+      <h2>Our Strategic Role</h2>
+      <p>PME plays a pivotal role in ensuring that planning, monitoring, and evaluation processes are effective, evidence-based, and aligned with institutional goals.</p>
+      <ul>
+        <li><strong>Data as a Strategic Asset:</strong> We ensure that institutional data is accurate, reliable, and transformed into actionable insights that guide decision-making and drive institutional improvements.</li>
+        <li><strong>Evidence-Based Decision-Making:</strong> Through systematic monitoring and evaluation, we support leadership in making informed decisions that enhance academic and operational outcomes.</li>
+        <li><strong>Performance Excellence:</strong> By tracking key performance indicators and assessing institutional effectiveness, we enable continuous improvements in planning, teaching, and administration.</li>
+        <li><strong>Resource Optimization:</strong> We provide insights for efficient deployment of financial and human resources, ensuring sustainability and accountability.</li>
+        <li><strong>Strategic Alignment:</strong> We monitor and evaluate the implementation of strategic plans, ensuring alignment with university objectives and fostering institutional accountability.</li>
+        <li><strong>Collaborative Excellence:</strong> We facilitate interdepartmental cooperation and data transparency, ensuring cohesive and coordinated institutional actions.</li>
+      </ul>
+    </div>
 
-            <p>
-                As the custodian of institutional performance data, PME oversees the development, verification, and governance of all official university content intended for public dissemination. This includes strategic documents, performance reports, monitoring outcomes, and compliance-based submissions.
-            </p>
-        </section>
-
-        <div class="stats-section">
-            <h2 style="color: white; border: none; margin-top: 0;">PME at a Glance</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3 class="counter" data-target="3">0</h3>
-                    <p style="color: #E4E9EA;">Specialized Directorates</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="15">0</h3>
-                    <p style="color: #E4E9EA;">Core Functions</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="100">0</h3>
-                    <p style="color: #E4E9EA;">Data-Driven Approach</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="counter-text">24/7</h3>
-                    <p style="color: #E4E9EA;">Institutional Monitoring</p>
-                </div>
-            </div>
+    <div class="vm-grid">
+      <div class="vm-card vision">
+        <h2>Mission</h2>
+        <p>Our mission is to provide accurate, timely, and actionable insights that support the university's strategic objectives through comprehensive planning, monitoring, and evaluation services. We are committed to:</p>
+        <ul>
+          <li><strong>Strategic Planning Excellence:</strong> Supporting faculties and departments in developing operational and strategic plans aligned with institutional priorities.</li>
+          <li><strong>Performance Monitoring:</strong> Tracking key performance indicators and providing reports that promote accountability, transparency, and informed decision-making.</li>
+          <li><strong>Student Success Enhancement:</strong> Analyzing institutional and academic data to improve student outcomes, retention, and graduation rates.</li>
+          <li><strong>Quality Assurance:</strong> Monitoring adherence to institutional policies, accreditation requirements, and best practices.</li>
+          <li><strong>Research Excellence:</strong> Conducting institutional research to support strategic initiatives, policy development, and operational improvements.</li>
+        </ul>
+      </div>
+      <div class="vm-card mission">
+        <h2>Our Values</h2>
+        <div class="values-grid" style="grid-template-columns:1fr;">
+          <div class="value-card"><h4><i class="fas fa-shield-alt"></i> Data Integrity</h4><p>Ensuring all institutional data is accurate, reliable, and consistent across all platforms and reports.</p></div>
+          <div class="value-card"><h4><i class="fas fa-star"></i> Quality & Excellence</h4><p>Delivering high-quality monitoring, evaluation, and planning services that exceed expectations.</p></div>
+          <div class="value-card"><h4><i class="fas fa-eye"></i> Transparency</h4><p>Promoting openness in reporting, planning, and evaluation processes across the institution.</p></div>
+          <div class="value-card"><h4><i class="fas fa-handshake"></i> Collaboration</h4><p>Working across departments and units to strengthen institutional outcomes and shared success.</p></div>
+          <div class="value-card"><h4><i class="fas fa-balance-scale"></i> Accountability</h4><p>Maintaining responsibility and ownership of quality standards across all institutional processes.</p></div>
         </div>
+      </div>
+    </div>
 
-        <section>
-            <h2>Our Strategic Role</h2>
-            <p>
-                PME plays a pivotal role in ensuring that planning, monitoring, and evaluation processes are effective, evidence-based, and aligned with institutional goals. Our strategic importance includes:
-            </p>
-            <ul>
-                <li><strong>Data as a Strategic Asset:</strong> We ensure that institutional data is accurate, reliable, and transformed into actionable insights that guide decision-making and drive institutional improvements.</li>
-                <li><strong>Evidence-Based Decision-Making:</strong> Through systematic monitoring and evaluation, we support leadership in making informed decisions that enhance academic and operational outcomes.</li>
-                <li><strong>Performance Excellence:</strong> By tracking key performance indicators and assessing institutional effectiveness, we enable continuous improvements in planning, teaching, and administration.</li>
-                <li><strong>Resource Optimization:</strong> We provide insights for efficient deployment of financial and human resources, ensuring sustainability and accountability.</li>
-                <li><strong>Strategic Alignment:</strong> We monitor and evaluate the implementation of strategic plans, ensuring alignment with university objectives and fostering institutional accountability.</li>
-                <li><strong>Collaborative Excellence:</strong> We facilitate interdepartmental cooperation and data transparency, ensuring cohesive and coordinated institutional actions.</li>
-            </ul>
-        </section>
+    <div class="content-card" style="text-align:center;">
+      <a href="../reports/pme-overview.pdf" target="_blank" class="download-link"><i class="fas fa-download"></i> Download PME Directorate Overview (PDF)</a>
+    </div>
+  </div>
 
-        <!-- <section>
-            <h2>Vision</h2>
-            <div class="highlight-box">
-                <p>To be the central driver of evidence-based institutional excellence, enabling Walter Sisulu University to achieve its strategic objectives through effective planning, monitoring, and evaluation.</p>
-            </div>
-        </section> -->
-
-        <section>
-            <h2>Mission</h2>
-            <p>
-                Our mission is to provide accurate, timely, and actionable insights that support the university's strategic objectives through comprehensive planning, monitoring, and evaluation services. We are committed to:
-            </p>
-            <ul>
-                <li><strong>Strategic Planning Excellence:</strong> Supporting faculties and departments in developing operational and strategic plans aligned with institutional priorities.</li>
-                <li><strong>Performance Monitoring:</strong> Tracking key performance indicators and providing reports that promote accountability, transparency, and informed decision-making.</li>
-                <li><strong>Student Success Enhancement:</strong> Analyzing institutional and academic data to improve student outcomes, retention, and graduation rates.</li>
-                <li><strong>Resource Optimization:</strong> Guiding resource allocation through comprehensive monitoring and evaluation of programs and initiatives.</li>
-                <li><strong>Quality Assurance:</strong> Monitoring adherence to institutional policies, accreditation requirements, and best practices.</li>
-                <li><strong>Research Excellence:</strong> Conducting institutional research to support strategic initiatives, policy development, and operational improvements.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Our Values</h2>
-            <p>
-                The PME Directorate upholds the core values of Walter Sisulu University while emphasizing our commitment to excellence:
-            </p>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <h4><i class="fas fa-shield-alt"></i> Data Integrity</h4>
-                    <p>Ensuring all institutional data is accurate, reliable, and consistent across all platforms and reports.</p>
-                </div>
-                <div class="value-card">
-                    <h4><i class="fas fa-star"></i> Quality & Excellence</h4>
-                    <p>Delivering high-quality monitoring, evaluation, and planning services that exceed expectations.</p>
-                </div>
-                <div class="value-card">
-                    <h4><i class="fas fa-eye"></i> Transparency</h4>
-                    <p>Promoting openness in reporting, planning, and evaluation processes across the institution.</p>
-                </div>
-                <div class="value-card">
-                    <h4><i class="fas fa-handshake"></i> Collaboration</h4>
-                    <p>Working across departments and units to strengthen institutional outcomes and shared success.</p>
-                </div>
-                <div class="value-card">
-                    <h4><i class="fas fa-chart-line"></i> Continuous Improvement</h4>
-                    <p>Using insights and evaluation to guide sustainable development and operational efficiency.</p>
-                </div>
-                <div class="value-card">
-                    <h4><i class="fas fa-balance-scale"></i> Accountability</h4>
-                    <p>Maintaining responsibility and ownership of quality standards across all institutional processes.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <p style="text-align: center; margin-top: 3rem;">
-                <strong>Learn More About Our Work:</strong><br>
-                <a href="reports/pme-overview.pdf" target="_blank" rel="noopener noreferrer" class="download-link">
-                    <i class="fas fa-download"></i> Download PME Directorate Overview (PDF)
-                </a>
-            </p>
-        </section>
-    </section>
-<script>
-// Counter Animation
-function animateCounters() {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200;
-
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const inc = target / speed;
-
-        if (count < target) {
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(() => animateCounters(), 1);
-        } else {
-            counter.innerText = target;
-        }
-    });
-}
-
-// Intersection Observer for counter animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-        }
-    });
-});
-
-const statsSection = document.querySelector('.stats-section');
-if (statsSection) {
-    observer.observe(statsSection);
-}
-</script>
-
+  <div id="pme-footer"></div>
+  <script src="../js/shared-components.js"></script>
 </body>
-
 </html>

@@ -1,284 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - Institutional Research Intelligence</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institutional Efficiency — IRP | WSU</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
-<style>
-    .Introduction {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #E4E9EA;
-        color: #1a1a1a;
-        margin: 0;
-        padding: 3rem 2rem;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.65;
-        font-size: 1.125rem;
-    }
-
-    .Introduction h1,
-    h2 {
-        color: #561415;
-        font-weight: 700;
-        margin-bottom: 0.6rem;
-        letter-spacing: 0.02em;
-    }
-
-    .Introduction h1 {
-        font-size: 2.4rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-    }
-
-    .Introduction h2 {
-        font-size: 1.6rem;
-        margin-top: 2.5rem;
-    }
-
-    .Introduction p {
-        color: #3b3b3b;
-        margin-bottom: 1.25rem;
-        font-weight: 400;
-        text-align: justify;
-    }
-
-    .Introduction ul {
-        padding-left: 1.5rem;
-        margin-bottom: 2.5rem;
-        color: #3b3b3b;
-        list-style-type: disc;
-        text-align: justify;
-    }
-
-    .Introduction ul li {
-        margin-bottom: 0.85rem;
-        line-height: 1.5;
-    }
-
-    strong {
-        color: #561415;
-        font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-        .Introduction {
-            padding: 2rem 1rem;
-            font-size: 1rem;
-        }
-
-        .Introduction h1 {
-            font-size: 1.8rem;
-        }
-
-        .Introduction h2 {
-            font-size: 1.3rem;
-        }
-    }
-</style>
-
 <body>
-              <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/mbods-sis.png');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">IRP — Core Function</span>
+      <h1>Institutional Research Intelligence</h1>
+      <p>Conducting strategic research and surveys to guide institutional planning and decision-making.</p>
+    </div>
+  </section>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span>
+      <a href="../index.html">IRP</a>
+      <span class="sep">/</span>
+      <span class="current">Institutional Efficiency</span>
+    </div>
+  </div>
 
-                        </form>
-                    </div>
+  <div class="content-section">
+    <div class="content-card">
+      <h2>Overview</h2>
+      <p>The Institutional Research Intelligence function at WSU conducts regular surveys among staff and students to gather valuable information about the institution. This information aids in institutional planning, identifies areas requiring action, and offers insights for decision-making. Additionally, the function conducts ad hoc surveys to investigate specific issues that necessitate in-depth analysis.</p>
+    </div>
 
+    <div class="content-card">
+      <h2>Roles and Responsibilities</h2>
+      <ul>
+        <li><strong>Conceptualization and Implementation of Research Studies:</strong> Develop and execute a comprehensive plan for institutional research studies across WSU.</li>
+        <li><strong>Institutional Surveys:</strong> Conduct various types of institutional surveys for academic and administrative units across WSU.</li>
+        <li><strong>Coordination of Research Activities:</strong> Establish, maintain, and coordinate WSU's institutional research activities.</li>
+        <li><strong>Key Performance Indicators (KPIs):</strong> Utilize survey data to provide insights and metrics for evaluating institutional KPIs.</li>
+        <li><strong>Strategic Advantages and Innovation:</strong> Identify and leverage WSU's comparative advantages through data-driven insights.</li>
+        <li><strong>Responsive Decision-Making:</strong> Empower WSU to respond effectively to strategic needs and emerging trends through institutional research and analytics.</li>
+      </ul>
+    </div>
 
+    <div class="content-card">
+      <h2>Research Methodologies & Approaches</h2>
+      <p>The Institutional Research Intelligence function employs diverse research methodologies to gather comprehensive insights about WSU's performance, stakeholder satisfaction, and strategic positioning.</p>
+      <h4>Research Methods:</h4>
+      <ul>
+        <li><strong>Quantitative Surveys:</strong> Large-scale surveys using statistical sampling methods to gather measurable data on student satisfaction, staff engagement, and institutional performance.</li>
+        <li><strong>Qualitative Research:</strong> Focus groups, interviews, and case studies to gain deeper insights into stakeholder experiences and institutional culture.</li>
+        <li><strong>Mixed-Method Approaches:</strong> Combining quantitative and qualitative methods for comprehensive understanding of complex institutional issues.</li>
+        <li><strong>Longitudinal Studies:</strong> Tracking changes and trends over time to assess the impact of institutional initiatives and policies.</li>
+        <li><strong>Benchmarking Studies:</strong> Comparative analysis with peer institutions to identify best practices and areas for improvement.</li>
+        <li><strong>Predictive Analytics:</strong> Using historical data to forecast trends and inform strategic planning decisions.</li>
+      </ul>
+    </div>
 
-                    <ul class="nav-links">
-                        <li><a href="../index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional
-                                        Efficiency</a></li>
-                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional
-                                        Research</a></li>
-                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
-                                <li><a href="abi.html" class="dropdown-link">Analytics & Business
-                                        Intelligence</a>
-                                </li>
+    <div class="content-card">
+      <h2>Impact & Strategic Value</h2>
+      <p>Institutional Research Intelligence directly contributes to WSU's strategic success by providing evidence-based insights that inform critical decisions across all levels of the institution.</p>
+      <h4>Strategic Contributions:</h4>
+      <ul>
+        <li><strong>Strategic Planning Support:</strong> Provide data-driven insights that inform institutional strategic planning and goal setting.</li>
+        <li><strong>Performance Monitoring:</strong> Track institutional performance against key indicators and benchmarks.</li>
+        <li><strong>Risk Identification:</strong> Early identification of potential challenges and opportunities through systematic research.</li>
+        <li><strong>Stakeholder Engagement:</strong> Enhance understanding of stakeholder needs and expectations to improve service delivery.</li>
+        <li><strong>Innovation Catalyst:</strong> Identify emerging trends and opportunities for institutional innovation and growth.</li>
+        <li><strong>Accountability & Transparency:</strong> Support institutional accountability through transparent reporting and evidence-based decision-making.</li>
+      </ul>
+    </div>
+  </div>
 
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br><br><br><br><br><br>
-    <!-- Hero Section -->
-    <section style="
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    ">
-        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">Institutional Research Intelligence</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem;">Conducting strategic research and surveys to guide institutional planning and decision-making</p>
-        
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="../IR/dashboard.html" style="
-                background: rgba(255,255,255,0.2);
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: background 0.3s ease;
-            ">View Dashboards</a>
-            <a href="../IR/reports.html" style="
-                background: rgba(255,255,255,0.2);
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: background 0.3s ease;
-            ">View Reports</a>
-        </div>
-    </section>
-    
-    <section class="Introduction" style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Overview</h2>
-        <p>
-            The Institutional Research Intelligence function at WSU conducts regular surveys among staff and students to gather valuable information about the institution. This information aids in institutional planning, identifies areas requiring action, and offers insights for decision-making. Additionally, the function conducts ad hoc surveys to investigate specific issues that necessitate in-depth analysis. It provides expert guidance and advice to various staff members on matters related to institutional research, particularly in the application and interpretation of survey data.
-        </p>
-
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Roles and Responsibilities</h2>
-        <ul>
-            <li><strong>Conceptualization and Implementation of Research Studies:</strong> Develop and execute a comprehensive plan for institutional research studies across WSU. Identify research objectives, methodologies, and data collection strategies.</li>
-            <li><strong>Institutional Surveys:</strong> Conduct various types of institutional surveys for academic and administrative units across WSU. Ensure the design, administration, and analysis of surveys are consistent and aligned with institutional goals.</li>
-            <li><strong>Coordination of Research Activities:</strong> Establish, maintain, and coordinate WSU's institutional research activities. Oversee the collection, analysis, interpretation, and reporting of data from institutional surveys.</li>
-            <li><strong>Key Performance Indicators (KPIs):</strong> Utilize survey data to provide insights and metrics for evaluating institutional Key Performance Indicators (KPIs). Collaborate with stakeholders to assess WSU's performance against set benchmarks.</li>
-            <li><strong>Strategic Advantages and Innovation:</strong> Identify and leverage WSU's comparative advantages through data-driven insights. Promote innovation and leadership by utilising institutional research to maximize impact.</li>
-            <li><strong>Responsive Decision-Making:</strong> Empower WSU to respond effectively to strategic needs and emerging trends through the application of institutional research and analytics. Stay informed about trends in higher education and conduct studies on issues impacting the university's operations and objectives.</li>
-        </ul>
-
-        <p>
-            The Institutional Research Intelligence function serves as a vital resource for WSU, enabling informed decision-making, strategic planning, and continuous improvement by providing timely and accurate data and insights.
-        </p>
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Research Methodologies & Approaches</h2>
-            <p style="text-align: justify;">
-                The Institutional Research Intelligence function employs diverse research methodologies to gather comprehensive insights about WSU's performance, stakeholder satisfaction, and strategic positioning.
-            </p>
-            
-            <h4 style="color: #561415; font-size: 1.3rem; margin: 2rem 0 1rem;">Research Methods:</h4>
-            <ul>
-                <li><strong>Quantitative Surveys:</strong> Large-scale surveys using statistical sampling methods to gather measurable data on student satisfaction, staff engagement, and institutional performance.</li>
-                <li><strong>Qualitative Research:</strong> Focus groups, interviews, and case studies to gain deeper insights into stakeholder experiences and institutional culture.</li>
-                <li><strong>Mixed-Method Approaches:</strong> Combining quantitative and qualitative methods for comprehensive understanding of complex institutional issues.</li>
-                <li><strong>Longitudinal Studies:</strong> Tracking changes and trends over time to assess the impact of institutional initiatives and policies.</li>
-                <li><strong>Benchmarking Studies:</strong> Comparative analysis with peer institutions to identify best practices and areas for improvement.</li>
-                <li><strong>Predictive Analytics:</strong> Using historical data to forecast trends and inform strategic planning decisions.</li>
-            </ul>
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Impact & Strategic Value</h2>
-            <p style="text-align: justify;">
-                Institutional Research Intelligence directly contributes to WSU's strategic success by providing evidence-based insights that inform critical decisions across all levels of the institution.
-            </p>
-            
-            <h4 style="color: #561415; font-size: 1.3rem; margin: 2rem 0 1rem;">Strategic Contributions:</h4>
-            <ul>
-                <li><strong>Strategic Planning Support:</strong> Provide data-driven insights that inform institutional strategic planning and goal setting.</li>
-                <li><strong>Performance Monitoring:</strong> Track institutional performance against key indicators and benchmarks.</li>
-                <li><strong>Risk Identification:</strong> Early identification of potential challenges and opportunities through systematic research.</li>
-                <li><strong>Stakeholder Engagement:</strong> Enhance understanding of stakeholder needs and expectations to improve service delivery.</li>
-                <li><strong>Innovation Catalyst:</strong> Identify emerging trends and opportunities for institutional innovation and growth.</li>
-                <li><strong>Accountability & Transparency:</strong> Support institutional accountability through transparent reporting and evidence-based decision-making.</li>
-            </ul>
-            
-            <p style="text-align: justify;">
-                Through systematic research and analysis, this function ensures that WSU remains responsive, innovative, and aligned with its mission to deliver excellence in higher education.
-            </p>
-        </div>
-    </section>
-    
-    <script>
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

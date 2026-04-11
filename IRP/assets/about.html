@@ -1,367 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - WSU</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About IRP | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<style>
-    .Introduction {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #E4E9EA;
-        color: #1a1a1a;
-        margin: 0;
-        padding: 3rem 2rem;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.65;
-        font-size: 1.125rem;
-    }
-
-    /* Headings */
-    .Introduction h1,
-    h2 {
-        color: #561415;
-        font-weight: 700;
-        margin-bottom: 0.6rem;
-        letter-spacing: 0.02em;
-    }
-
-    .Introduction h1 {
-        font-size: 2.8rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        font-family: 'Georgia', serif;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-    }
-
-    .Introduction h2 {
-        font-size: 1.8rem;
-        /* margin-top: 3.5rem; */
-        /* border-bottom: 3px solid #242426; */
-        /* padding-bottom: 0.4rem; */
-        font-family: 'Segoe UI Semibold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    }
-
-    /* Paragraphs */
-    .Introduction p {
-        color: #3b3b3b;
-        margin-bottom: 1.25rem;
-        font-weight: 400;
-        max-width: 100%;
-        text-align: justify;
-    }
-
-    /* Lists */
-    .Introduction ul {
-        padding-left: 1.5rem;
-        margin-bottom: 2.5rem;
-        color: #3b3b3b;
-        list-style-type: disc;
-        text-align: justify;
-    }
-
-    .Introduction ul li {
-        margin-bottom: 0.85rem;
-        line-height: 1.5;
-    }
-
-    strong {
-        color: #561415;
-        font-weight: 600;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        .Introduction {
-            padding: 2rem 1rem;
-            font-size: 1rem;
-        }
-
-        .Introduction h1 {
-            font-size: 2rem;
-            margin-top: 2rem;
-        }
-
-        .Introduction h2 {
-            font-size: 1.4rem;
-            margin-top: 2rem;
-        }
-    }
-</style>
-
 <body>
-            <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/mbods-sis.png');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">IRP</span>
+      <h1>About IRP</h1>
+      <p>Institutional Research & Planning — driving data-informed excellence at Walter Sisulu University.</p>
+    </div>
+  </section>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span><a href="../index.html">IRP</a>
+      <span class="sep">/</span><span class="current">About Us</span>
+    </div>
+  </div>
 
-                        </form>
-                    </div>
+  <div class="content-section">
+    <div class="content-card">
+      <h2>Introduction</h2>
+      <p>At WSU, we envision "An impactful, technology-infused African University" — a future where knowledge, innovation, and excellence are integral components of our institutional DNA. The Institutional Research and Planning (IRP) unit is central to charting this course, providing the data intelligence and strategic planning frameworks that guide the university's decisions.</p>
+      <p>In an era of rapid change, evolving student needs, and increasing complexity in higher education, the role of Institutional Intelligence has never been more critical. Data-informed decision-making and insightful intelligence are the cornerstones of our ability to adapt, thrive, and fulfil our commitment to excellence.</p>
+      <a href="reports/irp-overview-2024.pdf" target="_blank" class="download-link"><i class="fas fa-file-pdf"></i> Download the IRP Unit Overview (PDF)</a>
+    </div>
 
+    <div class="content-card">
+      <h2>The Rationale for Institutional Intelligence</h2>
+      <p>Institutional Intelligence plays a pivotal role in the success of our strategic plan. Its importance lies in its capacity to harness data as a powerful resource that propels us forward.</p>
+      <ul>
+        <li><strong>Data as a Strategic Asset:</strong> Data is not merely a byproduct of our operations — it is a strategic asset that empowers us to make informed choices. IRP ensures that this data is transformed into actionable insights.</li>
+        <li><strong>Evidence-Based Decision-Making:</strong> The unit equips us with the tools and knowledge needed to make informed, evidence-based decisions that drive institutional progress.</li>
+        <li><strong>Enhancing Student Success:</strong> By analysing student data, IRP identifies factors affecting student outcomes, enabling targeted strategies for retention, graduation, and academic achievement.</li>
+        <li><strong>Optimizing Resource Allocation:</strong> IRP assists in optimizing the allocation of financial and human resources, ensuring fiscal responsibility and sustainability.</li>
+        <li><strong>Fostering Academic Excellence:</strong> Through its insights, we can continuously improve our curriculum and learning experiences.</li>
+        <li><strong>Strategic Planning and Accountability:</strong> IRP supports the development and monitoring of the strategic plan, ensuring we remain on course and accountable to our stakeholders.</li>
+        <li><strong>Data-Driven Collaboration:</strong> By promoting transparency and collaboration, IRP strengthens our sense of community, aligning efforts and resources to achieve common goals.</li>
+      </ul>
+    </div>
 
+    <div class="vm-grid">
+      <div class="vm-card vision">
+        <h2>Vision</h2>
+        <p>To be the driving force behind data-informed excellence, empowering the institution to achieve its highest potential by providing insightful intelligence for strategic decision-making and innovation.</p>
+      </div>
+      <div class="vm-card mission">
+        <h2>Mission</h2>
+        <p>Our mission is to leverage data-driven insights and intelligence to support the university's commitment to excellence in education, research, and operational efficiency. We are dedicated to:</p>
+        <ul>
+          <li><strong>Enabling Enrolment Excellence:</strong> Collaborate with stakeholders to plan student enrolment and track performance against targets.</li>
+          <li><strong>Promoting Operational Efficiency:</strong> Identify areas for improvement and align operational processes with strategic goals.</li>
+          <li><strong>Informing Performance Accountability:</strong> Produce annual performance plan reports and mid-term review reports.</li>
+          <li><strong>Elevating Student Success:</strong> Analyse student data to identify factors affecting success and implement support strategies.</li>
+          <li><strong>Empowering At-Risk Students:</strong> Develop and manage programmes to support at-risk students.</li>
+          <li><strong>Enhancing Curriculum Quality:</strong> Evaluate the effectiveness of academic programmes and curriculum details.</li>
+          <li><strong>Driving Institutional Research:</strong> Lead and conduct institutional research studies to provide data for academic planning.</li>
+        </ul>
+      </div>
+    </div>
 
-                    <ul class="nav-links">
-                        <li><a href="../index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link active">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="insti_efficiency.html" class="dropdown-link">Institutional
-                                        Efficiency</a></li>
-                                <li><a href="stu.html" class="dropdown-link">Student Tracking - Institutional
-                                        Research</a></li>
-                                <li><a href="hemis.html" class="dropdown-link">HEMIS</a></li>
-                                <li><a href="abi.html" class="dropdown-link">Analytics & Business
-                                        Intelligence</a>
-                                </li>
+    <div class="content-card">
+      <h2>Our Values</h2>
+      <p>The IRP Directorate upholds the values outlined in the University's strategic plan, including honesty and integrity, quality and excellence, respect, and Ubuntu. Additionally, we commit to:</p>
+      <div class="values-grid">
+        <div class="value-card"><h4><i class="fas fa-shield-alt"></i> Data Integrity</h4><p>Maintaining the highest standards of data integrity, providing accurate, complete, and consistent information.</p></div>
+        <div class="value-card"><h4><i class="fas fa-search"></i> Meticulous Analysis</h4><p>Dedicated to meticulous attention to detail, delving into the story behind every data point.</p></div>
+        <div class="value-card"><h4><i class="fas fa-star"></i> Professional Excellence</h4><p>Striving for excellence in service delivery, offering responsive and proactive support.</p></div>
+        <div class="value-card"><h4><i class="fas fa-calendar-check"></i> Continuous Planning</h4><p>Promoting a culture of transparent and ongoing academic planning, engaging all stakeholders.</p></div>
+        <div class="value-card"><h4><i class="fas fa-handshake"></i> Transparency & Collaboration</h4><p>Working closely with university stakeholders to ensure alignment, openness, and shared success.</p></div>
+      </div>
+    </div>
+  </div>
 
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br><br><br><br><br><br>
-    <!-- Hero Section -->
-    <section class="about-hero" style="
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    ">
-        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">About IRP</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Institutional Research & Planning - Driving data-informed excellence at Walter Sisulu University</p>
-    </section>
-    <section class="Introduction" style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Introduction</h2>
-            <p>
-                At WSU, we envision “An impactful, technology-infused African University”, a future where knowledge,
-                innovation, and excellence are not just aspirations but integral components of our institutional DNA. To
-                chart the course toward this vision, we present our strategic plan, a roadmap that defines our mission,
-                goals, and the values we hold dear.
-            </p>
-            <p>
-                In an era of rapid change, evolving student needs, and increasing complexity in higher education, the
-                role
-                of Institutional Intelligence has never been more critical. As we embark on this strategic journey, we
-                recognize that data-informed decision-making and insightful intelligence are the cornerstones of our
-                ability
-                to adapt, thrive, and fulfil our commitment to excellence.
-            </p>
-            <p>
-                <strong>For more information:</strong>
-                <a href="assets/reports/irp-overview-2024.pdf" target="_blank" rel="noopener noreferrer"
-                    class="download-link">
-                    Download the IRP Unit Overview (PDF)
-                </a>
-            </p>
-        </section>
-
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">The Rationale for Institutional Intelligence</h2>
-            <p>
-                Institutional Intelligence, embodied by the Directorate of Institutional Intelligence, plays a pivotal
-                role
-                in the success of our strategic plan. Its importance lies in its capacity to harness data as a powerful
-                resource that propels us forward. Here, we delve into the rationale behind the Directorate's role:
-            </p>
-            <ul>
-                <li><strong>Data as a Strategic Asset:</strong> In today's world, data is not merely a byproduct of our
-                    operations; it is a strategic asset that empowers us to make informed choices. Institutional
-                    Intelligence ensures that this data is not only collected but also transformed into actionable
-                    insights.
-                </li>
-                <li><strong>Evidence-Based Decision-Making:</strong> In a dynamic and competitive higher education
-                    landscape, making decisions based on evidence is paramount. The Directorate equips us with the tools
-                    and
-                    knowledge needed to make informed, evidence-based decisions that drive our institution's progress.
-                </li>
-                <li><strong>Enhancing Student Success:</strong> Our commitment to student success is unwavering. By
-                    analysing student data, Institutional Intelligence identifies factors affecting student outcomes,
-                    enabling us to implement targeted strategies for retention, graduation, and academic achievement.
-                </li>
-                <li><strong>Optimizing Resource Allocation:</strong> We understand the significance of efficient
-                    resource
-                    allocation. The Directorate assists us in optimizing our allocation of financial and human
-                    resources,
-                    ensuring fiscal responsibility and sustainability.</li>
-                <li><strong>Fostering Academic Excellence:</strong> The Directorate's role extends to assessing the
-                    quality
-                    and effectiveness of our academic programs. Through its insights, we can continuously improve our
-                    curriculum and learning experiences.</li>
-                <li><strong>Strategic Planning and Accountability:</strong> Our strategic plan serves as our guiding
-                    light.
-                    Institutional Intelligence supports us in developing and monitoring the plan, ensuring that we
-                    remain on
-                    course and accountable to our stakeholders.</li>
-                <li><strong>Data-Driven Collaboration:</strong> Collaboration is at the heart of our institution. By
-                    promoting transparency and collaboration, the Directorate strengthens our sense of community,
-                    aligning
-                    our efforts and resources to achieve common goals.</li>
-            </ul>
-            <p>
-                As we embark on this strategic journey, we invite all members of our university community to embrace the
-                power of data and the insights that Institutional Intelligence provides. Together, we can transform
-                challenges into opportunities, innovate in our pursuit of excellence, and realise our vision for Walter
-                Sisulu University.
-            </p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #561415;">
-                <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Vision</h2>
-            <p>
-                To be the driving force behind data-informed excellence, empowering the institution to achieve its
-                highest
-                potential by providing insightful intelligence for strategic decision-making and innovation.
-            </p>
-            </div>
-            
-            <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 4px solid #831a1c;">
-                <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Mission</h2>
-            <p>
-                Our mission is to leverage data-driven insights and intelligence to support the university's commitment
-                to
-                excellence in education, research, and operational efficiency. We are dedicated to:
-            </p>
-            <ul>
-                <li><strong>Enabling Enrolment Excellence:</strong> Collaborate with stakeholders to plan student
-                    enrolment,
-                    track enrolment trends, and evaluate performance against enrolment targets, thus facilitating
-                    student-centred planning and growth.</li>
-                <li><strong>Promoting Operational Efficiency:</strong> Identify areas for operational efficiency
-                    improvements and align operational processes with the university's strategic goals, facilitating
-                    streamlined and effective operations.</li>
-                <li><strong>Informing Performance Accountability:</strong> Produce annual performance plan reports and
-                    mid-term review performance reports, promoting transparency and accountability.</li>
-                <li><strong>Elevating Student Success:</strong> Analyse student data to identify factors affecting
-                    student
-                    success and implement support strategies to enhance retention and graduation rates, ensuring every
-                    student's academic journey is successful.</li>
-                <li><strong>Empowering At-Risk Students:</strong> Develop and manage programmes to support at-risk
-                    students,
-                    ensuring their academic progress and overall success, fostering an inclusive and supportive learning
-                    environment.</li>
-                <li><strong>Enhancing Curriculum Quality:</strong> Evaluate the effectiveness of academic programmes,
-                    modules, and curriculum details to enhance the quality of education, ensuring that the university
-                    offers
-                    programmes that meet the highest standards.</li>
-                <li><strong>Driving Institutional Research:</strong> Lead and conduct institutional research studies to
-                    provide data for academic planning and decision-making, fostering a culture of continuous
-                    improvement
-                    and informed decision-making.</li>
-            </ul>
-            <p>
-                Our commitment is to empower the university community with the intelligence needed to excel, innovate,
-                and
-                advance, making a significant impact on the institution's success and the broader community it serves.
-            </p>
-            </div>
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Values</h2>
-            <p>
-                The Institutional Intelligence Directorate upholds the values outlined in the University's strategic
-                plan, including honesty and integrity, quality and excellence, respect, and Ubuntu. Furthermore, the
-                Directorate commits to the following additional values:
-            </p>
-            <ul>
-                <li><strong>Data Integrity:</strong> We commit to maintaining the highest standards of data integrity,
-                    providing the university community with accurate, complete, and consistent information.</li>
-                <li><strong>Meticulous Analysis:</strong> We are dedicated to meticulous attention to detail, delving
-                    into the story behind every data point to ensure deep, meaningful analysis.</li>
-                <li><strong>Professional Excellence:</strong> We strive for excellence in service delivery, offering
-                    responsive and proactive support that builds trust and confidence.</li>
-                <li><strong>Continuous Planning:</strong> We promote a culture of transparent and ongoing academic
-                    planning, engaging all stakeholders in shaping strategic priorities collaboratively.</li>
-                <li><strong>Transparency and Collaboration:</strong> We work closely with university stakeholders and
-                    departments to ensure alignment, openness, and shared success.</li>
-            </ul>
-            <p>
-                These values encapsulate the essence of the Directorate's commitment to data quality, professionalism,
-                transparency, and collaboration—pivotal in fulfilling its mission effectively within the university
-                community.
-            </p>
-        </div>
-    </section>
-
-    <script>
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

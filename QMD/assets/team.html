@@ -1,360 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRP - WSU</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — QMD | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<style>
-    .team-hero {
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    }
-    
-    .team-hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-    
-    .team-hero p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .team-section {
-        padding: 4rem 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .section-title {
-        text-align: center;
-        color: #561415;
-        margin-bottom: 3rem;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-    
-    .team-card {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: all 0.3s ease;
-        border-top: 4px solid #561415;
-    }
-    
-    .team-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card-header {
-        background: linear-gradient(135deg, #E4E9EA 0%, #e2e8f0 100%);
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .team-photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid white;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin: 0 auto 1rem;
-    }
-    
-    .card-content {
-        padding: 1.5rem 2rem 2rem;
-        text-align: center;
-    }
-    
-    .member-name {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: #561415;
-        margin-bottom: 0.5rem;
-    }
-    
-    .member-title {
-        color: #64748b;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-    }
-    
-    .member-subtitle {
-        color: #94a3b8;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        font-style: italic;
-    }
-    
-    .contact-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-        background: #E4E9EA;
-        border-radius: 8px;
-        margin-top: 1rem;
-    }
-    
-    .contact-info i {
-        color: #561415;
-    }
-    
-    .contact-info a {
-        color: #561415;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-    }
-    
-    .contact-info a:hover {
-        color: #831a1c;
-    }
-    
-    .director-card {
-        grid-column: 1 / -1;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    @media (max-width: 768px) {
-        .team-hero h1 {
-            font-size: 2rem;
-        }
-        
-        .team-section {
-            padding: 2rem 1rem;
-        }
-        
-        .team-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .director-card {
-            grid-column: 1;
-        }
-    }
-</style>
-
 <body>
-      <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/team.jpeg');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">QMD</span>
+      <h1>Meet Our Team</h1>
+      <p>Quality professionals ensuring excellence through comprehensive quality assurance and enhancement initiatives.</p>
+    </div>
+  </section>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span><a href="../index-qmd.html">QMD</a>
+      <span class="sep">/</span><span class="current">Our Team</span>
+    </div>
+  </div>
 
-                        </form>
-                    </div>
-
-
-
-                    <ul class="nav-links">
-                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
-                                        Developement</a></li>
-                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
-                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link active">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br>
-    <!-- Hero Section -->
-    <section class="team-hero">
-        <h1>Meet Our QMD Team</h1>
-        <p>Quality professionals ensuring excellence through comprehensive quality assurance and enhancement initiatives</p>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <!-- Director -->
-        <h2 class="section-title">Leadership</h2>
-        <div class="team-grid">
-            <div class="team-card director-card">
-                <div class="card-header">
-                    <img src="img/mkhoza.jpeg" alt="Christopher Khoza" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Christopher Khoza</h3>
-                    <p class="member-title">Director: Quality Management Directorate</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:cmkhoza@wsu.ac.za">cmkhoza@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
+  <section class="team-section">
+    <span class="eyebrow" style="text-align:center;display:block;">Leadership</span>
+    <h2 class="section-title">Director</h2>
+    <div class="team-grid">
+      <div class="team-card director-card">
+        <div class="team-card-header">
+          <img src="../assets/img/mkhoza.jpeg" alt="Christopher Khoza" class="team-photo" />
         </div>
-
-        <!-- Team Members -->
-        <h2 class="section-title">Quality Management Team</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="card-header">
-                    <img src="img/toni.jpeg" alt="Toni Mzwanele" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Toni Mzwanele</h3>
-                    <p class="member-title">Quality Assurance Manager</p>
-                    <p class="member-subtitle">Quality Enhancement and Monitoring</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:mtoni@wsu.ac.za">mtoni@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="card-header">
-                    <img src="img/image.png" alt="Maselo Isac Malema" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Maselo Isac Malema</h3>
-                    <p class="member-title">Quality Assurance Manager</p>
-                    <p class="member-subtitle">Quality Promotion and Capacity Development</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:mmalema@wsu.ac.za">mmalema@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="card-header">
-                    <img src="img/mbiza.jpeg" alt="Nomfanelo Mbiza" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Nomfanelo Mbiza</h3>
-                    <p class="member-title">Quality Assurance Officer</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:nmbiza@wsu.ac.za">nmbiza@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="card-header">
-                    <img src="img/jafta.jpeg" alt="Siziphiwe Jafta" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Siziphiwe Jafta</h3>
-                    <p class="member-title">Administrative Secretary</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:sjafta@wsu.ac.za">sjafta@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="card-header">
-                    <img src="img/matshini.jpeg" alt="Loyiso Matshini" class="team-photo" />
-                </div>
-                <div class="card-content">
-                    <h3 class="member-name">Loyiso Matshini</h3>
-                    <p class="member-title">Administrative Secretary</p>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:lmatshini@wsu.ac.za">lmatshini@wsu.ac.za</a>
-                    </div>
-                </div>
-            </div>
+        <div class="team-card-body">
+          <p class="member-name">Christopher Khoza</p>
+          <p class="member-title">Director: Quality Management Directorate</p>
+          <a href="mailto:cmkhoza@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> cmkhoza@wsu.ac.za</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <script>
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+    <span class="eyebrow" style="text-align:center;display:block;margin-top:1rem;">Quality Management Team</span>
+    <h2 class="section-title">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card-header"><img src="../assets/img/toni.jpeg" alt="Toni Mzwanele" class="team-photo" /></div>
+        <div class="team-card-body">
+          <p class="member-name">Toni Mzwanele</p>
+          <p class="member-title">Quality Assurance Manager</p>
+          <p class="member-subtitle">Quality Enhancement and Monitoring</p>
+          <a href="mailto:mtoni@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> mtoni@wsu.ac.za</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header"><img src="../assets/img/image.png" alt="Maselo Isac Malema" class="team-photo" /></div>
+        <div class="team-card-body">
+          <p class="member-name">Maselo Isac Malema</p>
+          <p class="member-title">Quality Assurance Manager</p>
+          <p class="member-subtitle">Quality Promotion and Capacity Development</p>
+          <a href="mailto:mmalema@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> mmalema@wsu.ac.za</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header"><img src="../assets/img/mbiza.jpeg" alt="Nomfanelo Mbiza" class="team-photo" /></div>
+        <div class="team-card-body">
+          <p class="member-name">Nomfanelo Mbiza</p>
+          <p class="member-title">Quality Assurance Officer</p>
+          <a href="mailto:nmbiza@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> nmbiza@wsu.ac.za</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header"><img src="../assets/img/jafta.jpeg" alt="Siziphiwe Jafta" class="team-photo" /></div>
+        <div class="team-card-body">
+          <p class="member-name">Siziphiwe Jafta</p>
+          <p class="member-title">Administrative Secretary</p>
+          <a href="mailto:sjafta@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> sjafta@wsu.ac.za</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header"><img src="../assets/img/matshini.jpeg" alt="Loyiso Matshini" class="team-photo" /></div>
+        <div class="team-card-body">
+          <p class="member-name">Loyiso Matshini</p>
+          <p class="member-title">Administrative Secretary</p>
+          <a href="mailto:lmatshini@wsu.ac.za" class="member-email"><i class="fas fa-envelope"></i> lmatshini@wsu.ac.za</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

@@ -1,184 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quality Promotion & Capacity Development - QMD | WSU</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quality Promotion & Capacity Development — QMD | WSU</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/news3.jpeg');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">QMD — Core Function</span>
+      <h1>Quality Promotion & Capacity Development</h1>
+      <p>Building a culture of excellence through stakeholder empowerment and quality advocacy.</p>
+    </div>
+  </section>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
-                        </form>
-                    </div>
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span>
+      <a href="../index-qmd.html">QMD</a>
+      <span class="sep">/</span>
+      <span class="current">Quality Promotion & Capacity Development</span>
+    </div>
+  </div>
 
-                    <ul class="nav-links">
-                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
-                                        Development</a></li>
-                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
-                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br><br><br><br><br><br>
-    <!-- Hero Section -->
-    <section style="
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    ">
-        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">Quality Promotion & Capacity Development</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem;">Building a culture of excellence through stakeholder empowerment and quality advocacy</p>
-        
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="../QMD/dashboard.html" style="
-                background: rgba(255,255,255,0.2);
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: background 0.3s ease;
-            ">View Dashboards</a>
-            <a href="../QMD/reports.html" style="
-                background: rgba(255,255,255,0.2);
-                color: white;
-                padding: 0.75rem 1.5rem;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: background 0.3s ease;
-            ">View Reports</a>
-        </div>
-    </section>
+  <div class="content-section">
+    <div class="content-card">
+      <h2>Quality Promotion and Capacity Development</h2>
+      <p>The Quality Promotion and Capacity Development (QPCD) function at WSU plays a crucial role in nurturing a strong, institution-wide quality culture. It ensures that all stakeholders — academic staff, support departments, students, and leadership — are equipped with the knowledge, skills, and support needed to understand and implement quality assurance and enhancement practices. QPCD promotes transparency, collaboration, and continuous institutional improvement.</p>
+    </div>
 
-    <section style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Quality Promotion and Capacity Development</h2>
-            <p style="text-align: justify; line-height: 1.7; margin-bottom: 1rem;">
-                The Quality Promotion and Capacity Development (QPCD) function at WSU plays a crucial role in nurturing a strong, 
-                institution-wide quality culture. It ensures that all stakeholders, academic staff, support departments, students, 
-                and leadership, are equipped with the knowledge, skills, and support needed to understand and implement quality 
-                assurance and enhancement practices. QPCD promotes transparency, collaboration, and continuous institutional improvement.
-            </p>
-        </div>
-        
-        <div style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #561415; font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">Roles and Responsibilities</h2>
-            <ul style="margin-left: 1.25rem; padding-left: 1rem; list-style-type: disc;">
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Promoting a Quality Culture:</strong> Lead advocacy, communication, and awareness initiatives that 
-                    ensure all university stakeholders understand their roles in sustaining quality and improving performance.</li>
+    <div class="content-card">
+      <h2>Roles and Responsibilities</h2>
+      <ul>
+        <li><strong>Promoting a Quality Culture:</strong> Lead advocacy, communication, and awareness initiatives that ensure all university stakeholders understand their roles in sustaining quality and improving performance.</li>
+        <li><strong>Capacity Development:</strong> Strengthen the abilities of faculties, departments, and support units through training workshops, quality conversations, seminars, and targeted development programmes that enhance quality management competency.</li>
+        <li><strong>Quality Promotion Activities:</strong> Facilitate activities that reinforce the value of quality assurance, such as briefings, information-sharing sessions, and regular communication aligned with institutional goals.</li>
+        <li><strong>Stakeholder Engagement:</strong> Encourage participation from students, staff, industry experts, and other partners to broaden perspectives and ensure inclusive quality enhancement processes.</li>
+        <li><strong>Support for Reviews and Improvement:</strong> Provide support to units in preparation for internal and external reviews, helping them reflect on strengths, identify gaps, and develop actionable improvement plans.</li>
+        <li><strong>Continuous Improvement Advocacy:</strong> Promote the use of evidence, reflection, and innovation to move beyond minimum standards, ensuring WSU remains responsive, future-focused, and aligned with national and global higher education expectations.</li>
+        <li><strong>Professionalisation of Quality Practice:</strong> Contribute to building a community of practice within WSU, enabling quality practitioners and leaders to engage with current best practices and emerging trends in higher education quality management.</li>
+      </ul>
+      <p>Quality Promotion and Capacity Development ensures that the university community is empowered, informed, and committed to excellence. Through training, dialogue, and shared reflection, QPCD strengthens WSU's ability to innovate, improve, and deliver exceptional academic and support services.</p>
+    </div>
+  </div>
 
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Capacity Development:</strong> Strengthen the abilities of faculties, departments, and support units 
-                    through training workshops, quality conversations, seminars, and targeted development programmes that enhance 
-                    quality management competency.</li>
-
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Quality Promotion Activities:</strong> Facilitate activities that reinforce the value of quality 
-                    assurance, such as briefings, information-sharing sessions, and regular communication aligned with institutional goals.</li>
-
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Stakeholder Engagement:</strong> Encourage participation from students, staff, industry experts, and 
-                    other partners to broaden perspectives and ensure inclusive quality enhancement processes.</li>
-
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Support for Reviews and Improvement:</strong> Provide support to units in preparation for internal 
-                    and external reviews, helping them reflect on strengths, identify gaps, and develop actionable improvement plans.</li>
-
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Continuous Improvement Advocacy:</strong> Promote the use of evidence, reflection, and innovation to 
-                    move beyond minimum standards, ensuring WSU remains responsive, future-focused, and aligned with national and 
-                    global higher education expectations.</li>
-
-                <li style="margin-bottom: 0.75rem; line-height: 1.7;"><strong style="color: #561415; font-weight: 600;">Professionalisation of Quality Practice:</strong> Contribute to building a community of practice within 
-                    WSU, enabling quality practitioners and leaders to engage with current best practices and emerging trends in 
-                    higher education quality management.</li>
-            </ul>
-
-            <p style="text-align: justify; line-height: 1.7; margin-top: 2rem;">
-                Quality Promotion and Capacity Development ensures that the university community is empowered, informed, and 
-                committed to excellence. Through training, dialogue, and shared reflection, QPCD strengthens WSU's ability to 
-                innovate, improve, and deliver exceptional academic and support services.
-            </p>
-        </div>
-    </section>
-
-    <script>
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
 </body>
-
 </html>

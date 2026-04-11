@@ -1,503 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact QMD - Quality Management Directorate | WSU</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact QMD | Walter Sisulu University</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-
-<style>
-    .contact-hero {
-        background: linear-gradient(135deg, #561415 0%, #831a1c 100%);
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        text-align: center;
-    }
-    
-    .contact-hero h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-    
-    .contact-hero p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .contact-section {
-        padding: 4rem 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-top: 3rem;
-    }
-    
-    .contact-info {
-        background: #E4E9EA;
-        padding: 2.5rem;
-        border-radius: 12px;
-        border-left: 4px solid #561415;
-    }
-    
-    .contact-info h2 {
-        color: #561415;
-        margin-bottom: 2rem;
-        font-size: 1.8rem;
-    }
-    
-    .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .contact-icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #561415, #831a1c);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-    
-    .contact-icon i {
-        color: white;
-        font-size: 1.2rem;
-    }
-    
-    .contact-details h3 {
-        color: #561415;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-    }
-    
-    .contact-details p {
-        color: #64748b;
-        margin: 0;
-        line-height: 1.5;
-    }
-    
-    .contact-details a {
-        color: #561415;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    
-    .contact-details a:hover {
-        color: #831a1c;
-    }
-    
-    .contact-form {
-        background: white;
-        padding: 2.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-    
-    .contact-form h2 {
-        color: #561415;
-        margin-bottom: 2rem;
-        font-size: 1.8rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: #374151;
-        font-weight: 500;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 2px solid #e5e7eb;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: border-color 0.3s ease;
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: #561415;
-    }
-    
-    .form-group textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
-    
-    .submit-btn {
-        background: #561415;
-        color: white;
-        padding: 0.875rem 2rem;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        width: 100%;
-    }
-    
-    .submit-btn:hover {
-        background: #831a1c;
-    }
-    
-    .units-section {
-        margin-top: 4rem;
-        padding: 3rem;
-        background: #E4E9EA;
-        border-radius: 12px;
-    }
-    
-    .units-section h2 {
-        text-align: center;
-        color: #561415;
-        margin-bottom: 3rem;
-        font-size: 2rem;
-    }
-    
-    .units-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-    
-    .unit-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        border-top: 4px solid #561415;
-    }
-    
-    .unit-card h3 {
-        color: #561415;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-    }
-    
-    .unit-card p {
-        color: #64748b;
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
-    }
-    
-    .unit-card .contact-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #561415;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-    
-    .unit-card .contact-link:hover {
-        color: #831a1c;
-    }
-    
-    @media (max-width: 768px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        .contact-hero h1 {
-            font-size: 2rem;
-        }
-        
-        .contact-section {
-            padding: 2rem 1rem;
-        }
-        
-        .contact-info,
-        .contact-form {
-            padding: 1.5rem;
-        }
-    }
-</style>
-
 <body>
-      <section>
-        <script src="../js/load-nav.js"></script>
-        <!-- nav.html -->
-        <header class="header">
-            <!-- First Row - Logo and Search -->
-            <div class="header-top">
-                <div class="header-container">
-                    <div class="logo-container centered-logo">
-                        <img src="img/logo.png" alt="WSU LOGO" class="logo-img" />
-                    </div>
-                    <div class="search-container">
-                        <form class="search-form" id="searchForm">
-                            <input type="text" class="search-input" id="searchInput" placeholder="Search..."
-                                aria-label="Search" />
-                            <button type="submit" class="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                            </button>
-                        </form>
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- NAVIGATION ROW 1 -->
-            <div class="header-bottom1" style="background:#000;">
-                <ul class="nav-lins">
-                    <li><a href="../../index.html" class="nav-link"><i class="fas fa-home"></i>Back to PME</a></li>
-                </ul>
-            </div>
+  <div id="pme-header"></div>
 
-            <!-- Second Row - Centered Navigation -->
-            <div class="header-bottom">
-                <!-- Hamburger Button for Mobile -->
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-                    aria-controls="sidebar">
-                    <span class="hamburger-icon">&#9776;</span>
-                    <span class="hamburger-label">Menu</span>
-                </button>
+  <section class="page-hero" style="background-image:url('../assets/img/1.jpg');">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">QMD</span>
+      <h1>Contact Us</h1>
+      <p>Quality Management Directorate — ensuring excellence through comprehensive quality assurance and enhancement.</p>
+    </div>
+  </section>
 
-                <!-- Sidebar Navigation -->
-                <nav class="navbar" id="sidebar" aria-label="Mobile Navigation">
-                    <!-- Sidebar Search for Mobile -->
-                    <div class="sidebar-search-container">
-                        <form class="sidebar-search-form" id="sidebarSearchForm">
-                            <input type="text" class="sidebar-search-input" placeholder="Search..."
-                                aria-label="Search" />
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../../index.html"><i class="fas fa-home"></i> PME Home</a>
+      <span class="sep">/</span><a href="../index-qmd.html">QMD</a>
+      <span class="sep">/</span><span class="current">Contact</span>
+    </div>
+  </div>
 
-                        </form>
-                    </div>
-
-
-
-                    <ul class="nav-links">
-                        <li><a href="../index-qmd.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">
-                                Core Functions
-                                <svg class="dropdown-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="quality-promo.html" class="dropdown-link">Quality Promotion and Capacity
-                                        Developement</a></li>
-                                <li><a href="qual-enh.html" class="dropdown-link">Quality Enhancement and Monitoring</a></li>
-                                <li><a href="qual-ass.html" class="dropdown-link">Quality Assurance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="news.html" class="nav-link">News</a></li>
-                        <li><a href="team.html" class="nav-link">Meet Our Team</a></li>
-                        <li><a href="contact.html" onclick="contact()" class="nav-link active">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-    <br><br>
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <h1>Contact QMD</h1>
-        <p>Quality Management Directorate - Ensuring excellence through comprehensive quality assurance and enhancement</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="contact-grid">
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <h2>Get In Touch</h2>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Office Location</h3>
-                        <p>61 Cambridge Street<br>
-                        East London CBD<br>
-                        East London, 5200<br>
-                        South Africa</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Phone</h3>
-                        <p><a href="tel:+27437029200">+27 (0)43 702 9200</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <p><a href="mailto:lmatshini@wsu.ac.za">lmatshini@wsu.ac.za</a><br>
-                        <a href="mailto:sijafta@wsu.ac.za">sijafta@wsu.ac.za</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday<br>
-                        08:00 AM - 16:00 PM</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="department">Department/Faculty</label>
-                        <input type="text" id="department" name="department">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="recipient">Contact Person *</label>
-                        <select id="recipient" name="recipient" required>
-                            <option value="">Select contact person</option>
-                            <option value="cmkhoza@wsu.ac.za">Quality Assurance Director</option>
-                            <option value="mtoni@wsu.ac.za">QA Manager: Quality Enhancement & Monitoring</option>
-                            <option value="mmalema@wsu.ac.za">QA Manager: Quality Promotion & Capacity Development</option>
-                            <option value="lmatshini@wsu.ac.za">Secretary</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" placeholder="Please provide details about your quality management inquiry..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
+  <div class="contact-page-wrap">
+    <div class="contact-layout">
+      <div class="contact-info-panel">
+        <h2>Get In Touch</h2>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-item-body"><h3>Office Location</h3><p>61 Cambridge Street<br>East London CBD<br>East London, 5200</p></div>
         </div>
-
-        <!-- QMD Units -->
-        <div class="units-section">
-            <h2>Our Quality Management Units</h2>
-            <div class="units-grid">
-                <div class="unit-card">
-                    <h3>Quality Assurance</h3>
-                    <p>Ensuring institutional compliance with quality standards and accreditation requirements.</p>
-                    <a href="mailto:cmkhoza@wsu.ac.za" class="contact-link">
-                        <i class="fas fa-envelope"></i> cmkhoza@wsu.ac.za
-                    </a>
-                </div>
-
-                <div class="unit-card">
-                    <h3>Quality Enhancement & Monitoring</h3>
-                    <p>Continuous improvement initiatives and systematic monitoring of quality processes.</p>
-                    <a href="mailto:mtoni@wsu.ac.za" class="contact-link">
-                        <i class="fas fa-envelope"></i> mtoni@wsu.ac.za
-                    </a>
-                </div>
-
-                <div class="unit-card">
-                    <h3>Quality Promotion & Capacity Development</h3>
-                    <p>Training, capacity building, and promoting quality culture across the institution.</p>
-                    <a href="mailto:mmalema@wsu.ac.za" class="contact-link">
-                        <i class="fas fa-envelope"></i> mmalema@wsu.ac.za
-                    </a>
-                </div>
-            </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-body"><h3>Phone</h3><p><a href="tel:+27437029200">+27 (0)43 702 9200</a></p></div>
         </div>
-    </section>
-    <script>
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simple validation
-            if (!data.name || !data.email || !data.recipient || !data.subject || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Simulate form submission
-            alert('Thank you for contacting QMD! We will get back to you within 24-48 hours.');
-            this.reset();
-        });
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-item-body"><h3>Email</h3><p><a href="mailto:lmatshini@wsu.ac.za">lmatshini@wsu.ac.za</a><br><a href="mailto:sjafta@wsu.ac.za">sjafta@wsu.ac.za</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-item-body"><h3>Office Hours</h3><p>Monday – Friday<br>08:00 – 16:00</p></div>
+        </div>
+      </div>
 
-        // Navigation functionality
-        document.getElementById('hamburger').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            this.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('active');
-        });
-    </script>
+      <div class="contact-form-panel">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="name" required></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>Department / Faculty</label><input type="text" name="department"></div>
+          <div class="form-group">
+            <label>Contact Person *</label>
+            <select name="recipient" required>
+              <option value="">Select contact person</option>
+              <option>Quality Assurance Director</option>
+              <option>QA Manager: Quality Enhancement & Monitoring</option>
+              <option>QA Manager: Quality Promotion & Capacity Development</option>
+              <option>Secretary</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Subject *</label><input type="text" name="subject" required></div>
+          <div class="form-group"><label>Message *</label><textarea name="message" placeholder="Please provide details about your quality management inquiry..." required></textarea></div>
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contact-units">
+      <h2>Our Quality Management Units</h2>
+      <div class="contact-units-grid">
+        <div class="contact-unit-card">
+          <h3>Quality Assurance</h3>
+          <p>Ensuring institutional compliance with quality standards and accreditation requirements.</p>
+          <a href="mailto:cmkhoza@wsu.ac.za"><i class="fas fa-envelope"></i> cmkhoza@wsu.ac.za</a>
+        </div>
+        <div class="contact-unit-card">
+          <h3>Quality Enhancement & Monitoring</h3>
+          <p>Continuous improvement initiatives and systematic monitoring of quality processes.</p>
+          <a href="mailto:mtoni@wsu.ac.za"><i class="fas fa-envelope"></i> mtoni@wsu.ac.za</a>
+        </div>
+        <div class="contact-unit-card">
+          <h3>Quality Promotion & Capacity Development</h3>
+          <p>Training, capacity building, and promoting quality culture across the institution.</p>
+          <a href="mailto:mmalema@wsu.ac.za"><i class="fas fa-envelope"></i> mmalema@wsu.ac.za</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pme-footer"></div>
+  <script src="../../js/shared-components.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      alert('Thank you for contacting QMD! We will get back to you within 24–48 hours.');
+      this.reset();
+    });
+  </script>
 </body>
-
 </html>
